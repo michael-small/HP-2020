@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Noto Sans JP Light";
+    src: url("nsjpl.woff2") format("woff2"),
+        url("nsjpl.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans JP Regular";
+    src: url("nsjpr.woff2") format("woff2"),
+        url("nsjpr.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Commons";
+    font-weight: "Bold";
+    src: url("TTCommons-Bold.woff2") format("woff2"),
+        url("TTCommons-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Commons";
+    font-weight: "Medium";
+    src: url("TTCommons-Medium.woff2") format("woff2"),
+        url("TTCommons-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Commons Light";
+    src: url("TTCommons-Light.woff2") format("woff2"),
+        url("TTCommons-Light.woff") format("woff");
+}
