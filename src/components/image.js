@@ -28,7 +28,6 @@ export default ({ filename, className,  ...props }) => (
     `}
 
     render={(data) => {
-      console.log(data);
       const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(filename)
       })
