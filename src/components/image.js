@@ -1,17 +1,12 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default ({ filename, className,  ...props }) => (
-
+export default ({ filename, className, ...props }) => (
   <StaticQuery
-
     query={graphql`
       query {
-        images: allFile(
-          filter: {
-            sourceInstanceName:{eq:"images"}
-          }) {
+        images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
           edges {
             node {
               relativePath
@@ -26,21 +21,16 @@ export default ({ filename, className,  ...props }) => (
         }
       }
     `}
-
-    render={(data) => {
+    render={data => {
       const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(filename)
       })
 
       if (!image) return
-      
+
       const imageFluid = image.node.childImageSharp.fluid
 
-      return <Img
-        fluid={imageFluid}
-        className={className}
-        {...props}
-      />
+      return <Img fluid={imageFluid} className={className} {...props} />
     }}
   />
 )

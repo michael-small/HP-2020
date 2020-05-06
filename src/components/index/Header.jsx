@@ -1,28 +1,32 @@
 import React from "react"
-import styled from "styled-components";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-import Background from "../background";
+import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import Background from "../background"
 
-export default () =>(
-<HeaderBackground filename='video2.png'>
-  <HeaderContainer>
-    <NavBar>
-      <NavItem>Service</NavItem>
-      <NavItem>Media</NavItem>
-      <NavItem>Company</NavItem>
-      <NavItem>Contact</NavItem>
-      <Line/>
-      <NavItem  style={{font:"16px/12px Noto Sans JP Regular", marginTop:"19px"}} >
-        <FontAwesomeIcon icon={faGlobe} style={{marginRight:"6px"}}/>日本語
-      </NavItem>
-    </NavBar>
-    <Title>Web3.0を実現する。</Title>
-    <Desctiption>
-    Stake Technologiesはブロックチェーンなどの最先端技術を用い次世代の分散型WebであるWeb3.0、そしてその先に、社会の再分散化を目指すテクノロジー企業です。
-    </Desctiption>
-  </HeaderContainer>
-</HeaderBackground>
+export default () => (
+  <HeaderBackground filename="video2.png">
+    <HeaderContainer>
+      <NavBar>
+        <NavItem>Service</NavItem>
+        <NavItem>Media</NavItem>
+        <NavItem>Company</NavItem>
+        <NavItem>Contact</NavItem>
+        <Line />
+        <NavItem
+          style={{ font: "16px/12px Noto Sans JP Regular", marginTop: "19px" }}
+        >
+          <FontAwesomeIcon icon={faGlobe} style={{ marginRight: "6px" }} />
+          日本語
+        </NavItem>
+      </NavBar>
+      <Title>Web3.0を実現する。</Title>
+      <Desctiption>
+        Stake
+        Technologiesはブロックチェーンなどの最先端技術を用い次世代の分散型WebであるWeb3.0、そしてその先に、社会の再分散化を目指すテクノロジー企業です。
+      </Desctiption>
+    </HeaderContainer>
+  </HeaderBackground>
 )
 
 const Title = styled.div`
@@ -41,7 +45,7 @@ const Desctiption = styled.div`
 const NavBar = styled.div`
   display: flex;
   justify-content: flex-end;
-  height:60px;
+  height: 60px;
   padding-right: 150px;
 `
 
@@ -51,10 +55,10 @@ const NavItem = styled.div`
 `
 
 const Line = styled.div`
-  background-color: #CCCCCC;
+  background-color: #cccccc;
   margin: auto 0px;
   height: 21px;
-  width: 1px; 
+  width: 1px;
 `
 
 const HeaderBackground = styled(Background)`
@@ -66,12 +70,12 @@ const HeaderBackground = styled(Background)`
 `
 const HeaderContainer = styled.div`
   position: absolute;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0px;
   text-align: left;
   padding-left: 150px;

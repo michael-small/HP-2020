@@ -1,14 +1,14 @@
 import React from "react"
-import Background from "../background";
-import styled from "styled-components";
+import Background from "../background"
+import styled from "styled-components"
 
-export default () =>(<>
-  <WaasBg filename="service-bg.png">
-    <WaasContainer>
-    </WaasContainer>
-  </WaasBg>
-</>)
-
+export default () => (
+  <>
+    <WaasBg filename="service-bg.png">
+      <WaasContainer></WaasContainer>
+    </WaasBg>
+  </>
+)
 
 const WaasBg = styled(Background)`
   && {
