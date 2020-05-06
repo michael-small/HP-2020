@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-export default ({filename, ...props}) => (
+export default ({filename, className, ...props}) => (
 
   <StaticQuery
 
@@ -35,9 +35,13 @@ export default ({filename, ...props}) => (
 
       if (!image) return
       
-      const imageFluid= image.node.childImageSharp.fluid
+      const imageFluid = image.node.childImageSharp.fluid
       
-      return <BackgroundImage fluid={imageFluid} {...props}>
+      return <BackgroundImage
+        fluid={imageFluid}
+        className={className}
+        {...props}
+      >
         {props.children}
       </BackgroundImage>
     }}

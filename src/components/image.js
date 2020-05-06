@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-export default ({ filename, ...props }) => (
+export default ({ filename, className,  ...props }) => (
 
   <StaticQuery
 
@@ -37,7 +37,11 @@ export default ({ filename, ...props }) => (
       
       const imageFluid = image.node.childImageSharp.fluid
 
-      return <Img　fluid={imageFluid} {...props}/>
+      return <Img
+        fluid={imageFluid}
+        className={className}
+        {...props}
+      />
     }}
   />
 )
