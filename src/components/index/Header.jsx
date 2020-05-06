@@ -64,7 +64,8 @@ const Line = styled.div`
 const HeaderBackground = styled(Background)`
   && {
     padding-top: 0px;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 900px;
   }
 `
