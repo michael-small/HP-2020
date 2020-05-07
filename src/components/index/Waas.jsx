@@ -5,14 +5,16 @@ import styled from "styled-components"
 export default () => (
   <>
     <WaasBg filename="service-bg.png">
-      <WaasContainer></WaasContainer>
+      <WaasContainer>
+        <h1>Web3.0 as a Service</h1>
+      </WaasContainer>
     </WaasBg>
   </>
 )
 
 const WaasBg = styled(Background)`
   && {
-    padding-top: 0px;
+    margin-top: 160px;
     width: 100%;
     height: 959px;
     background-color: #000000;
@@ -26,4 +28,29 @@ const WaasContainer = styled.div`
   right: 0px;
   bottom: 0px;
   padding-top: 120px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  & h1{
+    text-align: center;
+    margin: 0px auto 0px;
+    font: Bold 50px/67px TT Commons;
+  }
+`
+
+const Description = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 120px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  & h1{
+    text-align: center;
+    margin: 0px auto 0px;
+    font: Bold 50px/67px TT Commons;
+  }
 `
