@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "../image"
-import { ArrowButton } from "./ArrowButton";
+import { ArrowButton } from "./arrowButton";
 
 export default () => (
   <>
@@ -10,7 +10,7 @@ export default () => (
       人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、データの検証可能性をもたらします。我々は、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってモノや個人をエンパワーメントすることでよりよい社会を実現します。
     </WhoDescription>
     <div align="center" style={{marginTop:"20px"}}>
-      <ArrowButton label="More Detail" color="#1A1A1A"/>
+      <ArrowButton label="詳しく見る" color="#1A1A1A"/>
     </div>
     <SupportedByText>Supported By</SupportedByText>
     <SupporterArea>
@@ -45,10 +45,11 @@ const WhoText = styled.div`
   color: #1a1a1a;
 `
 const WhoDescription = styled.div`
-  margin-top: 28px;
-  width: 760px;
-  height: 135px;
+  max-width: min(760px, calc(100% - 38px) );
+  min-height: 135px;
   margin: 0 auto auto;
+  margin-top: 28px;
+
   color: #7b7b7b;
   text-align: center;
   font: 16px/30px Noto Sans JP Regular;
@@ -64,15 +65,17 @@ const SupportedByText = styled.div`
 
 const SupporterArea = styled.div`
   margin-top: 20px;
-  height: 110px;
+  margin-left: -15px;
+  margin-right: -15px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 `
 
 const SupporterImage = styled(Image)`
   && {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px
+  }`

@@ -11,6 +11,19 @@
 }
 
 @font-face {
+    font-family: "Noto Sans JP Bold";
+    src: url("nsjpb.woff") format("woff2"),
+        url("nsjpb.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("Orbitron-Bold.woff") format("woff"), /* Modern Browsers */
+        url("Orbitron-Bold.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: Bold;
+}
+
+@font-face {
     font-family: "TT Commons";
     font-weight: "Bold";
     src: url("TTCommons-Bold.woff2") format("woff2"),
@@ -26,6 +39,13 @@
 
 @font-face {
     font-family: "TT Commons Light";
+    src: url("TTCommons-Light.woff2") format("woff2"),
+        url("TTCommons-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Commons";
+    font-weight: "Light";
     src: url("TTCommons-Light.woff2") format("woff2"),
         url("TTCommons-Light.woff") format("woff");
 }

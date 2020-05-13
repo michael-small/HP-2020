@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
-export const ArrowButton = ({label, color}) => (
-  <ButtonRect color={color}>
+export const ArrowButton = ({lang, label, color, ...props}) => (
+  <ButtonRect lang={lang} color={color} style={{...props.style}}>
     <ButtonLabel>
       {label}
     </ButtonLabel>
@@ -19,9 +19,9 @@ const ButtonRect = styled.div`
   position: relative;
   border: 1px solid ${props=>props.color || "#1A1A1A"};
   color: ${props=>props.color || "#1A1A1A"};
-  opacity: 0.7
-  font-weight: Medium;
-  font: 16px/12px TT Commons;
+  opacity: 0.7;
+  font-weight:  ${props=>((props.lang==="en") ? "Medium"  : "Regular" )};
+  font: ${props=>((props.lang==="en") ? "16px/12px TT Commons" : "15px/12px Noto Sans JP Regular") };
   text-align: center;
 `
 

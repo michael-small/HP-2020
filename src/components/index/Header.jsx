@@ -14,10 +14,10 @@ export default () => (
         <NavItem>Contact</NavItem>
         <Line />
         <NavItem
-          style={{ font: "16px/12px Noto Sans JP Regular", marginTop: "19px" }}
+          // style={{ font: "16px/12px Noto Sans JP Regular", marginTop: "19px" }}
         >
-          <FontAwesomeIcon icon={faGlobe} style={{ marginRight: "6px" }} />
-          日本語
+          <FontAwesomeIcon icon={faGlobe} style={{ marginTop: -4, fontSize: 15, marginRight: "6px" }} />
+          English
         </NavItem>
       </NavBar>
       <Title>Web3.0を実現する。</Title>

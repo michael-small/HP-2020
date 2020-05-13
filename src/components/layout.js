@@ -7,6 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
+import { Link } from "gatsby"
+import Footer from "./footer"
 // import { useStaticQuery, graphql } from "gatsby"
 
 // import Header from "./header"
@@ -35,10 +38,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Stake Technologies — All Rights Reserved
-          {` `} Privacy Policy
-        </footer>
+        <Footer/>
       </div>
     </>
   )
