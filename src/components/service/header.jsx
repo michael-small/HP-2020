@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 import Background from "../background"
 
 export default () => (
@@ -45,13 +43,11 @@ const HeaderContent = styled.div`
   & h1 {
     margin: 0px 0px 29px;
     color: #FFFFFF;
-    font-weight: Light;
-    font: 60px/81px TT Commons;
+    font: 60px/81px TT Commons Light;
   }
   & p {
     margin: 0px;
     color: #CCCCCC;
-    font-weight: Regular;
     font: 16px/30px Noto Sans JP Regular;
   }
 `

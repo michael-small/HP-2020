@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "../image"
+import { StyledLink as Link } from "../link"
 import { ArrowButton } from "./arrowButton";
 
 export default () => (
@@ -10,7 +11,7 @@ export default () => (
       人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、データの検証可能性をもたらします。我々は、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってモノや個人をエンパワーメントすることでよりよい社会を実現します。
     </WhoDescription>
     <div align="center" style={{marginTop:"20px"}}>
-      <ArrowButton label="詳しく見る" color="#1A1A1A"/>
+      <Link to="/company"><ArrowButton label="詳しく見る" color="#1A1A1A"/></Link>
     </div>
     <SupportedByText>Supported By</SupportedByText>
     <SupporterArea>

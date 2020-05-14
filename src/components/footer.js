@@ -7,7 +7,7 @@
 
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { StyledLink as Link } from "./link"
 
 
 const Footer = () => {
@@ -18,39 +18,39 @@ const Footer = () => {
       alignItems: "top"
     }}>
       <FooterGroup>
-        <h1>Service</h1>
+        <h1><Link to="/service">Service</Link></h1>
         <ul>
-          <li><StyledLink>プロダクト</StyledLink></li>
-          <li><StyledLink>プロダクト開発</StyledLink></li>
-          <li><StyledLink>研究開発</StyledLink></li>
-          <li><StyledLink>技術コンサルティング</StyledLink></li>
+          <li><Link to="/service/#products">プロダクト</Link></li>
+          <li><Link to="/service/#development">プロダクト開発</Link></li>
+          <li><Link to="/service/#rd">研究開発</Link></li>
+          <li><Link to="/service/#consulting">技術コンサルティング</Link></li>
         </ul>
       </FooterGroup>
       <FooterGroup>
-        <h1>Media</h1>
+        <h1><Link to="/media">Media</Link></h1>
         <ul>
-          <li><StyledLink>全て</StyledLink></li>
-          <li><StyledLink>プロダクト</StyledLink></li>
-          <li><StyledLink>研究開発</StyledLink></li>
-          <li><StyledLink>技術コンサルティング</StyledLink></li>
+          <li><Link>全て</Link></li>
+          <li><Link>プロダクト</Link></li>
+          <li><Link>研究開発</Link></li>
+          <li><Link>技術コンサルティング</Link></li>
         </ul>
       </FooterGroup>
       <FooterGroup>
-        <h1>Company</h1>
+        <h1><Link to="/company">Company</Link></h1>
         <ul>
-          <li><StyledLink>ビジョン</StyledLink></li>
-          <li><StyledLink>チーム</StyledLink></li>
-          <li><StyledLink>バリュー</StyledLink></li>
-          <li><StyledLink>会社概要</StyledLink></li>
+          <li><Link to="/company#vision">ビジョン</Link></li>
+          <li><Link to="/company#team">チーム</Link></li>
+          <li><Link to="/company#value">バリュー</Link></li>
+          <li><Link to="/company#about">会社概要</Link></li>
         </ul>
       </FooterGroup>
       <FooterGroup>
-        <h1>Career</h1>
+        <h1><Link to="/career">Career</Link></h1>
       </FooterGroup>
       <FooterGroup>
-        <h1>Contact</h1>
+        <h1><Link to="/contact">Contact</Link></h1>
         <ul>
-          <li><StyledLink>お問い合わせ</StyledLink></li>
+          <li><Link to="/contact">お問い合わせ</Link></li>
         </ul>
       </FooterGroup>
       {/* <FooterGroup>
@@ -86,8 +86,7 @@ const FooterGroup = styled.div`
   & h1{
     display: block;
     margin: 0px;
-    font-weight: DemiBold;
-    font: 22px/22px TT Commons;
+    font: 600 22px/22px TT Commons;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -106,31 +105,19 @@ const FooterGroup = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
-  &&{
-    text-decoration: none;
-    color: inherit;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-`
-
 const FooterHr = styled.hr`
   border: 1px solid #4E4E4E;
   margin: 0px;
 `
 
 const Copywrite = styled.span`
-  font-weight: Regular;
   font: 15px/20px TT Commons;
   opacity: 1;
 `
 
-const PrivacyPolicy = styled(StyledLink)`
+const PrivacyPolicy = styled(Link)`
   && {
     margin-left: 20px;
-    font-weight: Regular;
     font: 13px/17px Noto Sans JP Regular;
     opacity: 1;
   }

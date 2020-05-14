@@ -2,18 +2,19 @@ import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import { StyledLink as Link } from "../link"
 
 export default () => (<Wrapper>
   <NavLine/>
-  <NavLabel>プロダクト</NavLabel>
+  <NavLabel to="/service/#products">プロダクト</NavLabel>
   <NavLine/>
-  <NavLabel>プロダクト開発</NavLabel>
+  <NavLabel to="/service/#development">プロダクト開発</NavLabel>
   <NavLine/>
-  <NavLabel>研究開発</NavLabel>
+  <NavLabel to="/service/#rd">研究開発</NavLabel>
   <NavLine/>
-  <NavLabel>技術コンサルティング</NavLabel>
+  <NavLabel to="/service/#consulting">技術コンサルティング</NavLabel>
   <NavLine/>
-  <NavLabel>ブログ</NavLabel>
+  <NavLabel to="/service/#blog">ブログ</NavLabel>
   <NavLine/>
 </Wrapper>)
 
@@ -39,12 +40,12 @@ const NavLabel = ({children, ...props}) => {
     padding-right: 50px;
   `
 
-  return (<div {...props}>
+  return (<Link {...props}>
   <NavLabelWrapper>
     {children}
   </NavLabelWrapper>
   <FontAwesomeIcon style={{fontSize: "14px", display: "block",margin:"0 auto"}} icon={faAngleDown}/>
-  </div>)
+  </Link>)
 }
 
 // const NavLabel = styled.div`
@@ -60,7 +61,7 @@ const NavLine = styled.div`
   margin: 0px;
   margin-bottom: auto;
   height: 40px;
-  width: 1px;
+  width: 2px;
   background: #000000 0% 0% no-repeat padding-box;
   opacity: 0.3;
 `

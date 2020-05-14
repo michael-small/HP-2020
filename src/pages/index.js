@@ -9,8 +9,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header />
-    <WhoWeAre />
-    <Waas />
+    <WhoWeAre id="who-we-are"/>
+    <Waas id="waas"/>
   </Layout>
 )
 

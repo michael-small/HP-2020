@@ -18,8 +18,7 @@ const Logo=styled.span`
   margin-bottom: 13px;
   width: 100%;
   text-align: center;
-  font-weight: Bold;
-  font: 28px/34px Orbitron;
+  font: Bold 28px/34px Orbitron;
   letter-spacing: 0px;
   color: ${props => props.color || "#1A1A1A"};
   opacity: 1;

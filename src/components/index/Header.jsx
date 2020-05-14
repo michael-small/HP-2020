@@ -1,25 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import NavBar from "../navbar"
 import Background from "../background"
 
 export default () => (
   <HeaderBackground filename="video2.png">
     <HeaderContainer>
-      <NavBar>
-        <NavItem>Service</NavItem>
-        <NavItem>Media</NavItem>
-        <NavItem>Company</NavItem>
-        <NavItem>Contact</NavItem>
-        <Line />
-        <NavItem
-          // style={{ font: "16px/12px Noto Sans JP Regular", marginTop: "19px" }}
-        >
-          <FontAwesomeIcon icon={faGlobe} style={{ marginTop: -4, fontSize: 15, marginRight: "6px" }} />
-          English
-        </NavItem>
-      </NavBar>
+      <NavBar isTopPage/>
       <Title>Web3.0を実現する。</Title>
       <Desctiption>
         Stake
@@ -40,25 +27,6 @@ const Desctiption = styled.div`
   margin-top: 26px;
   padding: 0px;
   font: 16px/30px Noto Sans JP Regular;
-`
-
-const NavBar = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  height: 60px;
-  padding-right: 150px;
-`
-
-const NavItem = styled.div`
-  margin: 25px 20px 17px;
-  font: 18px/12px TT Commons;
-`
-
-const Line = styled.div`
-  background-color: #cccccc;
-  margin: auto 0px;
-  height: 21px;
-  width: 1px;
 `
 
 const HeaderBackground = styled(Background)`

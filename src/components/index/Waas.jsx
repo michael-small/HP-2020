@@ -3,6 +3,7 @@ import Background from "../background"
 import Image from "../image"
 import styled from "styled-components"
 import {ArrowButton} from "./arrowButton"
+import {StyledLink as Link} from "../link"
 import { CardContainer,Card, CardContent, Logo } from "./Card"
 
 export default () => {
@@ -62,7 +63,7 @@ return (<>
         <h1>Development</h1>
         <h2>（プロダクト開発）</h2>
         <p>ブロックチェーンのスケーラビリティ問題を解決するプロダクト「Plasm Network」、ブロックチェーン技術をビジネスへ実装したい企業向けのシステム開発と提供を中心に実施しています。最新の技術と既存の安定性のある技術を組み合わせて提案をしています。</p>
-        <ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/>
+        <Link to="/service#development"><ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/></Link>
       </ItemDescription>
       </div>
 
@@ -71,7 +72,7 @@ return (<>
         <h1>R&amp;D</h1>
         <h2>（研究開発）</h2>
         <p>ブロックチェーンを中心に処理性能向上技術、秘匿化技術など幅広い領域で研究開発を行っています。オープンソースプロジェクトへの参加も積極的に行い世界的にも最先端技術への貢献が認められています。</p>
-        <ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/>
+        <Link to="/service#rd"><ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/></Link>
       </ItemDescription>
       <Image filename="RD.png" style={{ marginTop:"0px", marginRight: "122px",marginLeft: "auto", minWidth:"420px", height:"420px" }}/>
 
@@ -83,7 +84,7 @@ return (<>
         <h1>Consulting</h1>
         <h2>（コンサルティング）</h2>
         <p>自社プロダクトの開発とR&amp;Dで得た知見をもとに、アドバイスや技術論文の説明などを実施しています。</p>
-        <ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/>
+        <Link to="/service#consulting"><ArrowButton lang="ja" label="詳しく見る" color="#FFFFFF" style={{marginTop:"30px"}}/></Link>
       </ItemDescription>
       </div>
 
@@ -131,8 +132,7 @@ const ItemDescription = styled.div`
     margin: 0px;
     padding: 0px;
     text-align: inherit;
-    font-weight: DemiBold;
-    font: 38px/52px TT Commons;
+    <font:600></font:600> 38px/52px TT Commons;
   }
   & h2{
     display: inline-block;

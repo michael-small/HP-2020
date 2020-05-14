@@ -25,27 +25,28 @@
 
 @font-face {
     font-family: "TT Commons";
-    font-weight: "Bold";
     src: url("TTCommons-Bold.woff2") format("woff2"),
         url("TTCommons-Bold.woff") format("woff");
+    font-weight: Bold;
 }
 
 @font-face {
     font-family: "TT Commons";
-    font-weight: "Medium";
+    src: url("TTCommons-DemiBold.woff2") format("woff2"),
+        url("TTCommons-DemiBold.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "TT Commons";
     src: url("TTCommons-Medium.woff2") format("woff2"),
         url("TTCommons-Medium.woff") format("woff");
+    font-weight: 500;
+
 }
 
 @font-face {
     font-family: "TT Commons Light";
-    src: url("TTCommons-Light.woff2") format("woff2"),
-        url("TTCommons-Light.woff") format("woff");
-}
-
-@font-face {
-    font-family: "TT Commons";
-    font-weight: "Light";
     src: url("TTCommons-Light.woff2") format("woff2"),
         url("TTCommons-Light.woff") format("woff");
 }

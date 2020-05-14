@@ -20,8 +20,8 @@ const ButtonRect = styled.div`
   border: 1px solid ${props=>props.color || "#1A1A1A"};
   color: ${props=>props.color || "#1A1A1A"};
   opacity: 0.7;
-  font-weight:  ${props=>((props.lang==="en") ? "Medium"  : "Regular" )};
   font: ${props=>((props.lang==="en") ? "16px/12px TT Commons" : "15px/12px Noto Sans JP Regular") };
+  font-weight:  ${props=>((props.lang==="en") ? 500  : "Regular" )};
   text-align: center;
 `
 
