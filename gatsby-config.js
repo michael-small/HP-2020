@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Stake Technologies`,
     description: ``,
-    siteUrl: 'https://stake.co.jp/',
+    siteUrl: 'https://www.stake.co.jp/',
     author: `Task Ohmori`,
   },
   plugins: [
@@ -37,6 +37,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-cname`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
