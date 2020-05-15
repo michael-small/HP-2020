@@ -8,7 +8,7 @@ import Domain from "../../images/service/ドメイン知識.svg"
 import { ArrowButton } from "./arrowButton"
 // import { ArrowButton } from "./arrowButton"
 // import { StyledLink as Link } from "../link"
-// import { CardContainer,Card, CardContent, Logo } from "../index/Card"
+// import { CardContainer,Card, CardContent, Logo } from "../index/card"
 
 export default ({ ...props }) => {
   return (
