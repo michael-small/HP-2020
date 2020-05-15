@@ -4,7 +4,7 @@ import Image from "../image"
 import styled from "styled-components"
 import { ArrowButton } from "./arrowButton"
 import { StyledLink as Link } from "../link"
-import { CardContainer, Card, CardContent, Logo } from "./Card"
+import { CardContainer, Card, CardContent, Logo } from "./card"
 
 export default () => {
   return (
