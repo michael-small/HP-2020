@@ -10,17 +10,16 @@ import Image from "../components/image"
 const CompanyPage = () => (
   <Layout>
     <SEO title="Service" />
-    <NavBar/>
-    <Header/>
-    <Vision/>
-    <Team/>
+    <NavBar />
+    <Header />
+    <Vision />
+    <Team />
 
     {/* <Image filename="coming-soon.png" style={{
       width: "70%",height:"70vh",
       margin: "auto",opacity: "0.2"
     }}/> */}
-
-    </Layout>
+  </Layout>
 )
 
 export default CompanyPage

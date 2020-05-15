@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Image from "../image"
 import { StyledLink as Link } from "../link"
-import { ArrowButton } from "./arrowButton";
+import { ArrowButton } from "./arrowButton"
 
 export default () => (
   <>
@@ -10,8 +10,10 @@ export default () => (
     <WhoDescription>
       人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、データの検証可能性をもたらします。我々は、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってモノや個人をエンパワーメントすることでよりよい社会を実現します。
     </WhoDescription>
-    <div align="center" style={{marginTop:"20px"}}>
-      <Link to="/company"><ArrowButton label="詳しく見る" color="#1A1A1A"/></Link>
+    <div align="center" style={{ marginTop: "20px" }}>
+      <Link to="/company">
+        <ArrowButton label="詳しく見る" color="#1A1A1A" />
+      </Link>
     </div>
     <SupportedByText>Supported By</SupportedByText>
     <SupporterArea>
@@ -46,7 +48,7 @@ const WhoText = styled.div`
   color: #1a1a1a;
 `
 const WhoDescription = styled.div`
-  max-width: min(760px, calc(100% - 38px) );
+  max-width: min(760px, calc(100% - 38px));
   min-height: 135px;
   margin: 0 auto auto;
   margin-top: 28px;
@@ -78,5 +80,6 @@ const SupporterImage = styled(Image)`
   && {
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 40px
-  }`
+    margin-bottom: 40px;
+  }
+`

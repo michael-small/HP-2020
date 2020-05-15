@@ -6,7 +6,7 @@ import Background from "../background"
 export default () => (
   <HeaderBackground filename="video2.png">
     <HeaderContainer>
-      <NavBar isTopPage/>
+      <NavBar isTopPage />
       <Title>Web3.0を実現する。</Title>
       <Desctiption>
         Stake

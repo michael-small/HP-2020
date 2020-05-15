@@ -6,10 +6,12 @@ export default ({ filename, className, ...props }) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile( filter: {
-          sourceInstanceName: { eq: "images" }
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }  
-        }) {
+        images: allFile(
+          filter: {
+            sourceInstanceName: { eq: "images" }
+            extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          }
+        ) {
           edges {
             node {
               relativePath

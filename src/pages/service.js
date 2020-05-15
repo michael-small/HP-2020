@@ -10,11 +10,11 @@ import ServiceArea from "../components/service/service-area"
 const ServicePage = () => (
   <Layout>
     <SEO title="Service" />
-    <NavBar/>
-    <Header/>
-    <IndexNavBar/>
-    <Products id="products"/>
-    <ServiceArea/>
+    <NavBar />
+    <Header />
+    <IndexNavBar />
+    <Products id="products" />
+    <ServiceArea />
   </Layout>
 )
 

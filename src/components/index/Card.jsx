@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-const marginBetweenCard = 25;
+const marginBetweenCard = 25
 
-const Card=styled.div`
+const Card = styled.div`
   position: relative;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 6px 12px #0000001A;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 12px #0000001a;
 
   width: 300px;
   min-height: 330px;
@@ -13,7 +13,7 @@ const Card=styled.div`
   margin: ${marginBetweenCard}px;
 `
 
-const Logo=styled.span`
+const Logo = styled.span`
   display: inline-block;
   margin-bottom: 13px;
   width: 100%;
@@ -24,7 +24,7 @@ const Logo=styled.span`
   opacity: 1;
 `
 
-const CardContent=styled.div`
+const CardContent = styled.div`
   position: absolute;
   top: 175px;
   left: 0px;
@@ -36,12 +36,12 @@ const CardContent=styled.div`
   font-weight: Regular;
   font: 14px/24px Noto Sans JP Regular;
   letter-spacing: 0px;
-  color: #7B7B7B;
+  color: #7b7b7b;
   opacity: 1;
 `
 
-const CardContainer=styled.div`
-  margin-top: ${62-marginBetweenCard}px;
+const CardContainer = styled.div`
+  margin-top: ${62 - marginBetweenCard}px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
@@ -56,4 +56,4 @@ const CardContainer=styled.div`
     align-items: center;
   }
 `
-export { CardContainer, Card, CardContent, Logo };
+export { CardContainer, Card, CardContent, Logo }
