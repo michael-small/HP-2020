@@ -3,9 +3,11 @@ module.exports = {
   siteMetadata: {
     title: `Stake Technologies`,
     description: ``,
+    siteUrl: 'https://stake.co.jp/',
     author: `Task Ohmori`,
   },
   plugins: [
+    'gatsby-plugin-cname',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
