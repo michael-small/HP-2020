@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Stake Technologies`,
     description: ``,
-    siteUrl: 'https://www.stake.co.jp/',
+    siteUrl: 'https://stake.co.jp/',
     author: `Task Ohmori`,
   },
   plugins: [
