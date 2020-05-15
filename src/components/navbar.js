@@ -25,7 +25,7 @@ const NavBar = ({isTopPage}) => {
       <NavItem><Link to="/career">Career</Link></NavItem>
       <NavItem><Link to="/contact">Contact</Link></NavItem>
       <Line />
-      <NavItem>
+      <NavItem style={{minWidth:74}}>
         <FontAwesomeIcon icon={faGlobe} style={{ marginTop: -4, fontSize: 15, marginRight: "6px" }} />
         English
       </NavItem>
@@ -46,6 +46,7 @@ const Wrapper = styled.div`
   padding-left: 150px;
   padding-right: 150px;
   letter-spacing: 0px;
+  overflow: scroll;
   opacity: 1;
   ${props=>(props.isTopPage
   ?`color: #FFFFFF;`
