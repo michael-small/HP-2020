@@ -33,7 +33,7 @@ export default () => {
               />
               <CardContent>
                 <Logo color="#196DC2">PLASM</Logo>
-                Polkadotに接続するトランザクションの高速処理に特化した国産ブロックチェーン
+                Polkadotに接続するトランザクションの高速処理に特化した日本発ブロックチェーン
               </CardContent>
             </Card>
             <Card>
@@ -60,7 +60,7 @@ export default () => {
               </div>
               <CardContent>
                 <Logo>SESP</Logo>
-                ブロックチェーンを構築するフレームワークであるSubstrateを用いた実証実験・商用開発のパッケージ
+                ブロックチェーン技術利用のための仕様策定から開発、運用を行うパッケージ
               </CardContent>
             </Card>
             <Card>
@@ -108,8 +108,7 @@ export default () => {
                 <h1>Development</h1>
                 <h2>（プロダクト開発）</h2>
                 <p>
-                  ブロックチェーンのスケーラビリティ問題を解決するプロダクト「Plasm
-                  Network」、ブロックチェーン技術をビジネスへ実装したい企業向けのシステム開発と提供を中心に実施しています。最新の技術と既存の安定性のある技術を組み合わせて提案をしています。
+                  ブロックチェーンのスケーラビリティ問題を解決するプロダクト「Plasm Network」、ブロックチェーン技術をビジネスへ実装したい企業向けのシステム開発と提供を中心に実施しています。最新の技術と既存の安定性のある技術を組み合わせて提案をしています。
                 </p>
                 <Link to="/service#development">
                   <ArrowButton
@@ -140,7 +139,8 @@ export default () => {
                 <h1>R&amp;D</h1>
                 <h2>（研究開発）</h2>
                 <p>
-                  ブロックチェーンを中心に処理性能向上技術、秘匿化技術など幅広い領域で研究開発を行っています。オープンソースプロジェクトへの参加も積極的に行い世界的にも最先端技術への貢献が認められています。
+                  ブロックチェーンを中心に処理性能向上技術、秘匿化技術など幅広い領域で研究開発を行っています。
+                  オープンソースプロジェクトへの参加も積極的に行い世界的にも最先端技術への貢献が認められています。
                 </p>
                 <Link to="/service#rd">
                   <ArrowButton
@@ -184,10 +184,10 @@ export default () => {
               <ItemDescription
                 style={{ marginTop: "87px", marginRight: "220px" }}
               >
-                <h1>Consulting</h1>
-                <h2>（コンサルティング）</h2>
+                <h1>Tech Consulting</h1>
+                <h2>（技術コンサルティング）</h2>
                 <p>
-                  自社プロダクトの開発とR&amp;Dで得た知見をもとに、アドバイスや技術論文の説明などを実施しています。
+                自社プロダクトの開発とR&amp;Dで得た知見をもとに、アドバイスや技術論文の説明などを実施しています。
                 </p>
                 <Link to="/service#consulting">
                   <ArrowButton

@@ -14,8 +14,8 @@ export default () => (
       <HeaderContent>
         <h1>Who We Are</h1>
         <p>
-          Stake
-          Technologiesはブロックチェーンなどの最先端技術を用い次世代の分散型WebであるWeb3.0、そしてその先に社会の再分散化を目指すテクノロジー企業です。
+          Stake Technologiesは、ブロックチェーン技術の利用を中心として、次世代のWebであるWeb3.0の実現を推進していきます。
+          誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。
         </p>
       </HeaderContent>
     </HeaderWrapper>
