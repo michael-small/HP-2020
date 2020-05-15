@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/HP-2020",
+  // pathPrefix: "/HP-2020",
   siteMetadata: {
     title: `Stake Technologies`,
     description: ``,
