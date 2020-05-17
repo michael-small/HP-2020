@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import NavBar from "../navbar"
-import Background from "../background"
+import HeaderVideo from "../../images/index/video.mp4"
+import Image from "../image"
 
-export default () => (
-  <HeaderBackground filename="video2.png">
+export default () => {
+  return(
+    <Wrapper>
     <HeaderContainer>
       <NavBar isTopPage />
       <Title>Web3.0を実現する。</Title>
@@ -13,8 +15,13 @@ export default () => (
       誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。
       </Desctiption>
     </HeaderContainer>
-  </HeaderBackground>
-)
+    <HeaderBackground muted autoPlay loop >
+      <source src={HeaderVideo} type="video/mp4"/>
+      <Image filename="video2.png" />
+    </HeaderBackground>
+    </Wrapper>
+  )
+  }
 
 const Title = styled.div`
   margin-top: 275px;
@@ -22,28 +29,42 @@ const Title = styled.div`
 `
 
 const Desctiption = styled.div`
-  width: 620px;
-  height: 81px;
+  max-width: 620px;
+  // height: 81px;
   margin-top: 26px;
   padding: 0px;
   font: 16px/30px Noto Sans JP Regular;
 `
 
-const HeaderBackground = styled(Background)`
-  && {
-    padding-top: 0px;
-    width: 100%;
-    max-width: 1440px;
-    height: 900px;
-  }
+const Wrapper = styled.div`
+  position: relative;
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  max-width: 1440px;
+  height: 800px;
+  overflow: scroll;
 `
-const HeaderContainer = styled.div`
+
+const HeaderBackground = styled.video`
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
   top: 0px;
   left: 0px;
-  right: 0px;
-  bottom: 0px;
+  // right: 0px;
+  // bottom: 0px;
+  // margin: auto;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: inherit;
+`
+const HeaderContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px;
   color: #ffffff;
   letter-spacing: 0px;
   text-align: left;

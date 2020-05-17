@@ -4,6 +4,13 @@ import styled from "styled-components"
 import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "../index/card"
 
+// const memberData = [
+//   {
+//     filename.
+    
+//   },
+// ]
+
 export default ({ ...props }) => {
   return (
     <Container {...props}>
