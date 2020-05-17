@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import NavBar from "../navbar"
-import HeaderVideo from "../../images/index/video.mp4"
+import HeaderVideo from "../../images/index/video_light.mp4"
 import Image from "../image"
 
 export default () => {
