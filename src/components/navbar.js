@@ -69,8 +69,8 @@ const FlexEnd = styled.div`
 const Wrapper = styled.div`
   display: flex;
   height: 60px;
-  padding-left: 150px;
-  padding-right: 150px;
+  width: max(calc(100% - 300px), 900px);
+  margin: 0 auto 0;
   letter-spacing: 0px;
   overflow: scroll;
   opacity: 1;

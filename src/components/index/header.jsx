@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import NavBar from "../navbar"
 import HeaderVideo from "../../images/index/video_light.mp4"
+import HeaderImage from "../../images/video2.png"
+
 import Image from "../image"
 
 export default () => {
@@ -15,9 +17,8 @@ export default () => {
       誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。
       </Desctiption>
     </HeaderContainer>
-    <HeaderBackground muted autoPlay loop >
+    <HeaderBackground muted autoPlay loop poster={HeaderImage} >
       <source src={HeaderVideo} type="video/mp4"/>
-      <Image filename="video2.png" />
     </HeaderBackground>
     </Wrapper>
   )
@@ -41,8 +42,8 @@ const Wrapper = styled.div`
   background-color: rgba(0, 0, 0);
   width: 100%;
   max-width: 1440px;
-  height: 800px;
-  overflow: scroll;
+  height: 900px;
+  overflow: hidden;
 `
 
 const HeaderBackground = styled.video`
@@ -56,7 +57,7 @@ const HeaderBackground = styled.video`
   height: auto;
   min-width: 100%;
   min-height: 100%;
-  max-width: inherit;
+  // max-width: inherit;
 `
 const HeaderContainer = styled.div`
   position: relative;
