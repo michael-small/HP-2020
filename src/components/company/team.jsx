@@ -4,13 +4,6 @@ import styled from "styled-components"
 import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "../index/card"
 
-// const memberData = [
-//   {
-//     filename.
-    
-//   },
-// ]
-
 export default ({ ...props }) => {
   return (
     <Container {...props}>
@@ -86,7 +79,7 @@ export default ({ ...props }) => {
 }
 
 const Container = styled.div`
-  padding: 92px 200px 116px;
+  padding: 92px 80px 116px;
   background-color: #1a1a1a;
   letter-spacing: 0px;
   color: #ffffff;

@@ -15,7 +15,8 @@ import { navigate } from "gatsby"
 
 const NavBar = ({ isTopPage }) => {
   return (
-    <Wrapper isTopPage={isTopPage}>
+    <Wrapper>
+    <FlexContainer isTopPage={isTopPage}>
       {!isTopPage ? (
         <Link
           to="/"
@@ -56,20 +57,28 @@ const NavBar = ({ isTopPage }) => {
           English
         </NavItem>
       </FlexEnd>
+    </FlexContainer>
     </Wrapper>
   )
 }
 
-const FlexEnd = styled.div`
-  display: flex;
-  margin-left: auto;
-  justify-content: flex-end;
+const Wrapper = styled.div`
+  position: static;
+  width: 100%;
+  height: 60px;
 `
 
-const Wrapper = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   height: 60px;
-  width: max(calc(100% - 300px), 900px);
+  box-sizing: content-box;
+  padding-left: 150px;
+  padding-right: 150px;
+
+  // width: 100%;
+  max-width: max(calc(100% - 300px), 900px);
+  left: 0px;
+  right: 0px;
   margin: 0 auto 0;
   letter-spacing: 0px;
   overflow: scroll;
@@ -77,9 +86,19 @@ const Wrapper = styled.div`
   ${props =>
     props.isTopPage
       ? `color: #FFFFFF;`
-      : `background: #FFFFFF 0% 0% no-repeat padding-box;
-    color: #1A1A1A;`};
+      : `position: fixed;
+    z-index: 1;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    color: #1A1A1A;`
+  }
 `
+
+const FlexEnd = styled.div`
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+`
+
 
 const NavItem = styled.div`
   margin: 25px 20px 17px;

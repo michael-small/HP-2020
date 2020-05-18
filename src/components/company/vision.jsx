@@ -7,7 +7,7 @@ import { CardContainer, Card, CardContent, Logo } from "../index/card"
 
 export default ({ ...props }) => {
   return (
-    <Container>
+    <Container {...props}>
       <Image
         filename="company/vision.png"
         style={{
