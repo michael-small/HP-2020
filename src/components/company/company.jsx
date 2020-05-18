@@ -19,7 +19,31 @@ const Company = ({ ...props }) => {
           設立
           </Attr>
           <Val>
-          Stake Technologies株式会社
+          2019年1月
+          </Val>
+        </tr>
+        <tr>
+          <Attr>
+          住所
+          </Attr>
+          <Val>
+           {"東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"}
+          </Val>
+        </tr>
+        <tr>
+          <Attr>
+          代表取締役
+          </Attr>
+          <Val>
+          渡辺創太
+          </Val>
+        </tr>
+        <tr>
+          <Attr>
+          Eメール
+          </Attr>
+          <Val>
+          info@stake.co.jp
           </Val>
         </tr>
       </Table>
@@ -47,6 +71,8 @@ const Table= styled.table`
   td {
     vertical-align: middle;
     margin: auto 0 auto;
+    padding-top: 26px;
+    padding-bottom: 25px;
   }
   tr {
     height: 80px;
