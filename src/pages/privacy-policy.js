@@ -5,12 +5,17 @@ import NavBar from "../components/navbar"
 import Layout from "../components/layout"
 import Image from "../components/image"
 
-const ContactPage = () => (
+const PrivacyPolicyPage = () => (
   <Layout>
     <SEO title="Service" />
     <NavBar />
     <Container>
-      <h1>Contact</h1>
+    <h1>
+      Privacy Policy
+    </h1>
+    {/* <h2></h2>
+    <p></p> */}
+
     </Container>
     <Image
       filename="coming-soon.png"
@@ -39,14 +44,22 @@ const Container = styled.div`
     opacity: 1;
     margin: 0 auto 77px;
   }
+  h2 {
+    text-align: left;
+    font: 16px/30px Noto Sans JP Bold;
+    letter-spacing: 0px;
+    color: #1A1A1A;
+    opacity: 1;
+    margin: 0 auto 0;
+  } 
   p {
     text-align: left;
     font: 16px/30px Noto Sans JP Regular;
     letter-spacing: 0px;
     color: #7B7B7B;
     opacity: 1;
-    margin: 0 auto 28px;
+    margin: 0 auto 50px;
   } 
 `
 
-export default ContactPage
+export default PrivacyPolicyPage

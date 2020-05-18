@@ -9,8 +9,6 @@ import Team from "../components/company/team"
 import CoreValue from "../components/company/core-value"
 import Company from "../components/company/company"
 
-import Image from "../components/image"
-
 const indexNavBarLabels=[
   {
     to: "/company/#vision",

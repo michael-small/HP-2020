@@ -109,7 +109,7 @@ const Footer = () => {
         <Copywrite>
           {`© ${new Date().getFullYear()}, Stake Technologies — All Rights Reserved`}
         </Copywrite>
-        <PrivacyPolicy>プライバシーポリシー</PrivacyPolicy>
+        <PrivacyPolicy to="/privacy-policy">プライバシーポリシー</PrivacyPolicy>
         <div style={{ marginLeft: "auto" }}></div>
       </div>
     </FooterWrapper>

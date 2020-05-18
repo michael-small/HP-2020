@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import AngleDown from "../images/icons/arrow-down.inline.svg"
 import { StyledLink as Link } from "./link"
 
 /*
@@ -46,10 +45,12 @@ const Wrapper = styled.div`
 const NavLabel = ({ children, ...props }) => {
   const NavLabelWrapper = styled.div`
     white-space: nowrap;
-    margin: 10px 0px 0px -2px;
-    height: 30px;
+    margin: 0px 0px 0px -2px;
+    height: 40px;
     text-align: center;
     font: 16px/16px Noto Sans JP Regular;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
     border-left: solid 2px #A0A0A0;
@@ -60,10 +61,7 @@ const NavLabel = ({ children, ...props }) => {
   return (
     <Link {...props}>
       <NavLabelWrapper>{children}</NavLabelWrapper>
-      <FontAwesomeIcon
-        style={{ fontSize: "14px", display: "block", margin: "0 auto" }}
-        icon={faAngleDown}
-      />
+      <AngleDown css="fill: currentColor; margin: 0 auto 0; display: block" />
     </Link>
   )
 }

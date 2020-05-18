@@ -3,8 +3,9 @@ import Background from "../background"
 import Image from "../image"
 import styled from "styled-components"
 import { ArrowButton } from "./arrowButton"
+import ProductCards from "../product-cards"
 import { StyledLink as Link } from "../link"
-import { CardContainer, Card, CardContent, Logo } from "./card"
+import { CardContainer, Card, CardContent, Logo } from "../card"
 
 export default () => {
   return (
@@ -18,70 +19,7 @@ export default () => {
           }}
         >
           <h1>Web3.0 as a Service</h1>
-          <CardContainer>
-            <Card>
-              <Image
-                filename="plasm-logo-mark.png"
-                style={{
-                  position: "absolute",
-                  width: "100px",
-                  top: "47px",
-                  left: "0px",
-                  right: "0px",
-                  margin: "auto",
-                }}
-              />
-              <CardContent>
-                <Logo color="#196DC2">PLASM</Logo>
-                Polkadotに接続するトランザクションの高速処理に特化した日本発ブロックチェーン
-              </CardContent>
-            </Card>
-            <Card>
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: "40px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  filename="Substrate.png"
-                  style={{
-                    width: "114px",
-                  }}
-                />
-                <Image
-                  filename="Substrate.png"
-                  style={{
-                    width: "114px",
-                  }}
-                />
-              </div>
-              <CardContent>
-                <Logo>SESP</Logo>
-                ブロックチェーン技術利用のための仕様策定から開発、運用を行うパッケージ
-              </CardContent>
-            </Card>
-            <Card>
-              <Image
-                filename="coming-soon.png"
-                style={{
-                  position: "absolute",
-                  width: "260px",
-                  top: "10px",
-                  left: "0px",
-                  right: "0px",
-                  margin: "auto",
-                  opacity: "0.2",
-                }}
-              />
-              <CardContent>
-                <Logo>&nbsp;</Logo>
-                Product Coming Soon
-              </CardContent>
-            </Card>
-          </CardContainer>
+          <ProductCards/>
           <div style={{ marginTop: "-25px", position: "relative" }}>
             <div
               style={{

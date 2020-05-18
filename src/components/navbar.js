@@ -7,10 +7,9 @@
 
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import Globe from "../images/icons/globe.inline.svg"
 import StakeLogo from "../images/logo-slim.svg"
-import { StyledLink as Link } from "./link"
+import { StyledLink } from "./link"
 import { navigate } from "gatsby"
 
 const NavBar = ({ isTopPage }) => {
@@ -49,12 +48,11 @@ const NavBar = ({ isTopPage }) => {
           <Link to="/contact">Contact</Link>
         </NavItem>
         <Line />
-        <NavItem style={{ minWidth: 74 }}>
-          <FontAwesomeIcon
-            icon={faGlobe}
-            style={{ marginTop: -4, fontSize: 15, marginRight: "6px" }}
-          />
+        <NavItem style={{ minWidth: 74, whiteSpace: "nowrap"}}>
+          <Link to="/">
+          <Globe height="16px" style={{ fill: "currentColor", display: "inline",verticalAlign: "top",marginRight: "6px" }}/>
           English
+          </Link>
         </NavItem>
       </FlexEnd>
     </FlexContainer>
@@ -74,8 +72,6 @@ const FlexContainer = styled.div`
   box-sizing: content-box;
   padding-left: 150px;
   padding-right: 150px;
-
-  // width: 100%;
   max-width: max(calc(100% - 300px), 900px);
   left: 0px;
   right: 0px;
@@ -101,15 +97,21 @@ const FlexEnd = styled.div`
 
 
 const NavItem = styled.div`
-  margin: 25px 20px 17px;
-  font: 18px/12px TT Commons;
+  margin: 24px 20px 17px;
+  font: 18px TT Commons;
 `
 
 const Line = styled.div`
+  display: inline-block;  
   background-color: #cccccc;
   margin: auto 0px;
   height: 21px;
   width: 1px;
 `
 
+const Link = styled(StyledLink)`
+  &&{
+    vertical-align: top;
+  }
+`
 export default NavBar

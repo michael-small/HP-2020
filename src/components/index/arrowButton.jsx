@@ -1,15 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import ArrowRight from "../../images/icons/arrow-right.inline.svg"
 
 export const ArrowButton = ({ lang, label, color, ...props }) => (
   <ButtonRect lang={lang} color={color} style={{ ...props.style }}>
     <ButtonLabel>{label}</ButtonLabel>
-    <FontAwesomeIcon
-      style={{ position: "absolute", top: "14px", right: "17px" }}
-      icon={faArrowRight}
-    />
+    <ArrowRightIcon/>
   </ButtonRect>
 )
 
@@ -26,6 +22,16 @@ const ButtonRect = styled.div`
       : "15px/12px Noto Sans JP Regular"};
   font-weight: ${props => (props.lang === "en" ? 500 : "Regular")};
   text-align: center;
+`
+
+const ArrowRightIcon= styled(ArrowRight).attrs({
+  width: "13px",
+  height: "12px"
+})`
+  fill: currentColor;
+  position: absolute;
+  top: 14px;
+  right: 17px;
 `
 
 const ButtonLabel = styled.div`

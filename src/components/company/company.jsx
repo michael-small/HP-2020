@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { ArrowButton } from "../service/arrowButton"
 
 const Company = ({ ...props }) => {
   return (
@@ -7,46 +8,29 @@ const Company = ({ ...props }) => {
       <h1>Company</h1>
       <Table>
         <tr>
-          <Attr>
-          会社名
-          </Attr>
-          <Val>
-          Stake Technologies株式会社
-          </Val>
+          <Attr>会社名</Attr>
+          <Val>Stake Technologies株式会社</Val>
         </tr>
         <tr>
-          <Attr>
-          設立
-          </Attr>
-          <Val>
-          2019年1月
-          </Val>
+          <Attr>設立</Attr>
+          <Val>2019年1月</Val>
         </tr>
         <tr>
-          <Attr>
-          住所
-          </Attr>
+          <Attr>住所</Attr>
           <Val>
            {"東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"}
           </Val>
         </tr>
         <tr>
-          <Attr>
-          代表取締役
-          </Attr>
-          <Val>
-          渡辺創太
-          </Val>
+          <Attr>代表取締役</Attr>
+          <Val>渡辺創太</Val>
         </tr>
         <tr>
-          <Attr>
-          Eメール
-          </Attr>
-          <Val>
-          info@stake.co.jp
-          </Val>
+          <Attr>Eメール</Attr>
+          <Val>info@stake.co.jp</Val>
         </tr>
       </Table>
+      <ArrowButton css= "margin: 0 auto 0;" lang="ja" to="/contact" label="お問い合わせ"/>
     </Container>
   )
 }
@@ -65,7 +49,7 @@ const Container = styled.div`
 `
 
 const Table= styled.table`
-  margin: 26px auto 0;
+  margin: 26px auto 67.5px;
   width: 100%;
   max-width: 700px;
   td {
@@ -76,9 +60,7 @@ const Table= styled.table`
   }
   tr {
     height: 80px;
-  }
-  tr+tr{
-    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
     border-collapse: collapse;
   }
 `

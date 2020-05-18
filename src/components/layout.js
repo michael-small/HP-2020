@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
 const GlobalStyle = createGlobalStyle`
 html{
   box-sizing: border-box;
-  // overflow-y: scroll;
+  overflow-x: hidden;
 }
 * {
   box-sizing: inherit;

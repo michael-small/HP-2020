@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import ArrowRight from "../../images/icons/arrow-right.inline.svg"
+
 import { Link, navigate } from "gatsby"
 
 export const ArrowButton = ({
@@ -20,13 +20,20 @@ export const ArrowButton = ({
       onClick={() => navigate(to)}
     >
       <ButtonLabel>{label}</ButtonLabel>
-      <FontAwesomeIcon
-        style={{ position: "absolute", top: "26px", right: "34px" }}
-        icon={faArrowRight}
-      />
+      <ArrowRightIcon/>
     </ButtonRect>
   )
 }
+
+const ArrowRightIcon= styled(ArrowRight).attrs({
+  width: "18px",
+  height: "16.7px"
+})`
+  fill: currentColor;
+  position: absolute;
+  top: 26px;
+  right: 34px;
+`
 
 const ButtonRect = styled.div`
   width: 300px;
