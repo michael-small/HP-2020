@@ -15,7 +15,9 @@ const Footer = () => {
       <div
         style={{
           display: "flex",
-          padding: "65px 135px 120px",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          padding: "65px 135px 70px",
           alignItems: "top",
         }}
       >
@@ -119,12 +121,13 @@ const Footer = () => {
 const FooterWrapper = styled.footer`
   background: #1a1a1a 0% 0% no-repeat padding-box;
   color: #b2b2b2;
+  white-space: nowrap;
   letter-spacing: 0px;
   text-align: left;
 `
 
 const FooterGroup = styled.div`
-  margin: 0px 15px 0px;
+  margin: 0px 15px 50px;
   letter-spacing: 0px;
   color: #ffffff;
   & h1 {

@@ -24,7 +24,6 @@ export default () => {
             <div
               style={{
                 marginTop: "74px",
-                height: "420px",
                 display: "flex",
                 overflow: "show",
                 flexWrap: "nowrap",
@@ -61,7 +60,7 @@ export default () => {
 
             <div
               style={{
-                marginTop: "-77px",
+                // marginTop: "-77px",
                 height: "420px",
                 display: "flex",
                 overflow: "show",
@@ -103,9 +102,8 @@ export default () => {
 
             <div
               style={{
-                marginTop: "-77px",
+                // marginTop: "-77px",
                 width: "100%",
-                height: "420px",
                 display: "flex",
                 overflow: "show",
               }}

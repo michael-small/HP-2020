@@ -11,11 +11,13 @@ export default () => {
     <Wrapper>
     <HeaderContainer>
       <NavBar isTopPage />
+      <div css="margin-left: 150px">
       <Title>Web3.0を実現する。</Title>
       <Desctiption>
       Stake Technologiesは、ブロックチェーン技術の利用を中心として、次世代のWebであるWeb3.0の実現を推進していきます。
       誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。
       </Desctiption>
+      </div>
     </HeaderContainer>
     <HeaderBackground muted autoPlay loop poster={HeaderImage} >
       <source src={HeaderVideo} type="video/mp4"/>
@@ -70,5 +72,4 @@ const HeaderContainer = styled.div`
   color: #ffffff;
   letter-spacing: 0px;
   text-align: left;
-  padding-left: 150px;
 `
