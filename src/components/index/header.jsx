@@ -30,7 +30,7 @@ export default () => {
 
 const Title = withTheme(
   styled.h1(
-    (props) => `
+    props => `
   margin-top: 27vh;
   font: 70px/103px Noto Sans JP Light;
   ${props.theme.breakpoints.down("sm")} {

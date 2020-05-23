@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { withTheme } from "@material-ui/core"
 import Background from "../background"
 import Container from "../container"
 
@@ -38,26 +39,40 @@ const HeaderBackground = styled(Background)`
 `
 
 const HeaderContainer = styled(Container)`
-  padding-top: 0.1px;
+  overflow: hidden;
   width: 100%;
 `
 
-const HeaderContent = styled.div`
+const HeaderContent = withTheme(
+  styled.div(
+    props => `
   position: relative;
-  margin-top: 25vh;
   margin-left: 0px;
   max-width: 613px;
   text-align: left;
   letter-spacing: 0px;
   background-color: rgba(26, 26, 26, 0.8);
   & h1 {
-    margin: 0px 0px 29px;
+    margin-top: 25vh;
     color: #ffffff;
     font: 60px/81px TT Commons Light;
   }
   & p {
-    margin: 0px;
+    margin-top: 29px;
     color: #cccccc;
     font: 16px/30px Noto Sans JP Regular;
   }
+  ${props.theme.breakpoints.down("xs")} {
+    margin-top: 84px ;
+    & h1 {
+      font-size: 38px;
+      line-height: 52px;
+      margin-top: 84px;
+    }
+    & p{
+      margin-top: 19px;
+    }
+  }
 `
+  )
+)
