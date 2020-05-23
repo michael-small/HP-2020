@@ -26,7 +26,7 @@ const NavBar = ({ ...props }) => {
 const NavBarBig = ({ isTopPage, ...props }) => {
   return (
     <Wrapper isTopPage={isTopPage} {...props}>
-      <FlexContainer>
+      <FlexContainer isTopPage={isTopPage}>
         {!isTopPage ? (
           <Link
             to="/"

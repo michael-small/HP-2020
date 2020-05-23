@@ -30,14 +30,14 @@ export default () => {
 
 const Title = withTheme(
   styled.h1(
-    ({ theme }) => `
+    (props) => `
   margin-top: 27vh;
   font: 70px/103px Noto Sans JP Light;
-  ${theme.breakpoints.down("sm")} {
+  ${props.theme.breakpoints.down("sm")} {
     font-size: 56px;
     line-height: 70px;
   }
-  ${theme.breakpoints.down("xs")} {
+  ${props.theme.breakpoints.down("xs")} {
     font-size: 32px;
     line-height: 47px;
     text-align: center;
@@ -49,12 +49,12 @@ const Title = withTheme(
 
 const Desctiption = withTheme(
   styled.div(
-    ({ theme }) => `
+    props => `
   max-width: 620px;
   margin-top: 26px;
   padding: 0px;
   font: 16px/30px Noto Sans JP Regular;
-  ${theme.breakpoints.down("xs")} {
+  ${props.theme.breakpoints.down("xs")} {
     font-size: 15px;
     line-height: 30px;
     text-align: center;
