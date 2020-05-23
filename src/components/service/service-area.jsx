@@ -5,7 +5,7 @@ import Koushori from "../../images/service/高処理性能.svg"
 import Agile from "../../images/service/アジャイル実装.svg"
 import Hannyousei from "../../images/service/汎用性.svg"
 import Domain from "../../images/service/ドメイン知識.svg"
-import { ArrowButton } from "./arrowButton"
+import ArrowButton from "../arrowButton"
 // import { ArrowButton } from "./arrowButton"
 // import { StyledLink as Link } from "../link"
 // import { CardContainer,Card, CardContent, Logo } from "../index/card"
@@ -18,7 +18,8 @@ export default ({ ...props }) => {
         <h2>（プロダクト開発）</h2>
       </div>
       <p>
-        ブロックチェーンのスケーラビリティ問題を解決するプロダクト「Plasm Network」、ブロックチェーン技術をビジネスへ実装したい企業向けのシステム開発と提供を中心に実施しています。最新の技術と既存の安定性のある技術を組み合わせて提案をしています。
+        ブロックチェーンのスケーラビリティ問題を解決するプロダクト「Plasm
+        Network」、ブロックチェーン技術をビジネスへ実装したい企業向けのシステム開発と提供を中心に実施しています。最新の技術と既存の安定性のある技術を組み合わせて提案をしています。
       </p>
       <h2>提供価値</h2>
       <FlexContainer>

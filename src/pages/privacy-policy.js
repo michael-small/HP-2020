@@ -10,12 +10,9 @@ const PrivacyPolicyPage = () => (
     <SEO title="Service" />
     <NavBar />
     <Container>
-    <h1>
-      Privacy Policy
-    </h1>
-    {/* <h2></h2>
+      <h1>Privacy Policy</h1>
+      {/* <h2></h2>
     <p></p> */}
-
     </Container>
     <Image
       filename="coming-soon.png"
@@ -40,7 +37,7 @@ const Container = styled.div`
     font: 60px/81px TT Commons;
     font-weight: Bold;
     letter-spacing: 0px;
-    color: #1A1A1A;
+    color: #1a1a1a;
     opacity: 1;
     margin: 0 auto 77px;
   }
@@ -48,18 +45,18 @@ const Container = styled.div`
     text-align: left;
     font: 16px/30px Noto Sans JP Bold;
     letter-spacing: 0px;
-    color: #1A1A1A;
+    color: #1a1a1a;
     opacity: 1;
     margin: 0 auto 0;
-  } 
+  }
   p {
     text-align: left;
     font: 16px/30px Noto Sans JP Regular;
     letter-spacing: 0px;
-    color: #7B7B7B;
+    color: #7b7b7b;
     opacity: 1;
     margin: 0 auto 50px;
-  } 
+  }
 `
 
 export default PrivacyPolicyPage

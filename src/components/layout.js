@@ -28,12 +28,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <GlobalStyle/>
+      <GlobalStyle />
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div
         style={{
-          margin: `0 auto 0`,
-          maxWidth: 1440,
+          width: "100%",
           padding: `0px`,
         }}
       >
@@ -46,8 +45,16 @@ const Layout = ({ children }) => {
 
 const GlobalStyle = createGlobalStyle`
 html{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:62.5%;
+  vertical-align:baseline;
+  background:transparent;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 * {
   box-sizing: inherit;
@@ -59,7 +66,7 @@ html{
   box-sizing: inherit;
 }
 
-html, body, div, span, object, iframe,
+body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -153,6 +160,7 @@ hr {
 input, select {
   vertical-align:middle;
 }
+
 `
 
 Layout.propTypes = {

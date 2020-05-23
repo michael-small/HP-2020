@@ -5,7 +5,7 @@ import ArrowRight from "../../images/icons/arrow-right.inline.svg"
 export const ArrowButton = ({ lang, label, color, ...props }) => (
   <ButtonRect lang={lang} color={color} style={{ ...props.style }}>
     <ButtonLabel>{label}</ButtonLabel>
-    <ArrowRightIcon/>
+    <ArrowRightIcon />
   </ButtonRect>
 )
 
@@ -24,9 +24,9 @@ const ButtonRect = styled.div`
   text-align: center;
 `
 
-const ArrowRightIcon= styled(ArrowRight).attrs({
+const ArrowRightIcon = styled(ArrowRight).attrs({
   width: "13px",
-  height: "12px"
+  height: "12px",
 })`
   fill: currentColor;
   position: absolute;

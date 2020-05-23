@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Stake Technologies`,
     description: ``,
-    siteUrl: 'https://stake.co.jp/',
+    siteUrl: "https://stake.co.jp/",
     author: `Task Ohmori`,
   },
   plugins: [
@@ -37,12 +37,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /\.inline\.svg/,
-        }
-      }
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -50,6 +50,7 @@ module.exports = {
         // Add any options here
       },
     },
+    `gatsby-theme-material-ui`,
     `gatsby-plugin-cname`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

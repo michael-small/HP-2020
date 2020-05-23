@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { withTheme } from "@material-ui/core"
 
 const marginBetweenCard = 25
 
@@ -8,9 +9,11 @@ const Card = styled.div`
   box-shadow: 0px 6px 12px #0000001a;
 
   width: 300px;
-  min-height: 330px;
+  height: 330px;
   border-radius: 4px;
-  margin: ${marginBetweenCard}px;
+  margin-left: ${marginBetweenCard}px;
+  margin-right: ${marginBetweenCard}px;
+  margin-bottom: ${marginBetweenCard}px;
 `
 
 const Logo = styled.span`
@@ -40,20 +43,23 @@ const CardContent = styled.div`
   opacity: 1;
 `
 
-const CardContainer = styled.div`
-  margin-top: ${62 - marginBetweenCard}px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  // margin-top: 62px;
+const CardContainer = withTheme(
+  styled.div(
+    ({ theme }) => `
+  margin-left: ${-marginBetweenCard}px;
+  margin-right: ${-marginBetweenCard}px;
+  margin-bottom: ${-marginBetweenCard}px;
   justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
   display: flex;
   flex-direction: row;
-  @media (max-width: 768px) {
+  ${theme.breakpoints.down("xs")} {
     flex-direction: column;
     align-items: center;
   }
 `
+  )
+)
+
 export { CardContainer, Card, CardContent, Logo }

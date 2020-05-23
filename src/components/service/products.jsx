@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "../image"
 import styled from "styled-components"
-import { ArrowButton } from "./arrowButton"
+import ArrowButton from "../arrowButton"
 import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "../card"
 import ProductCards from "../product-cards"
@@ -10,7 +10,7 @@ export default ({ ...props }) => {
   return (
     <Container {...props}>
       <h1>Products</h1>
-      <ProductCards/>
+      <ProductCards />
       <Link to="/contact">
         <ArrowButton label="お問い合わせ" style={{ margin: "50px auto 0px" }} />
       </Link>

@@ -13,19 +13,23 @@ import { StyledLink as Link } from "./link"
 ]
 */
 
-export default ({labels, ...props}) => {
-  if(!!labels) return (
-  <div style={{overflow: "scroll"}}>
-  <Wrapper>
-  {/* <NavLine/> */}
-    {labels.map((item,index)=>(<>
-      <NavLabel to={item.to} key={index}>{item.label}</NavLabel>
-      {/* <NavLine /> */}
-    </>))}
-  </Wrapper>
-  </div>
-
-  )
+export default ({ labels, ...props }) => {
+  if (!!labels)
+    return (
+      <div style={{ overflow: "scroll" }}>
+        <Wrapper>
+          {/* <NavLine/> */}
+          {labels.map((item, index) => (
+            <>
+              <NavLabel to={item.to} key={index}>
+                {item.label}
+              </NavLabel>
+              {/* <NavLine /> */}
+            </>
+          ))}
+        </Wrapper>
+      </div>
+    )
 }
 
 const Wrapper = styled.div`
@@ -53,9 +57,8 @@ const NavLabel = ({ children, ...props }) => {
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    border-left: solid 2px #A0A0A0;
-    border-right: solid 2px #A0A0A0;
-
+    border-left: solid 2px #a0a0a0;
+    border-right: solid 2px #a0a0a0;
   `
 
   return (

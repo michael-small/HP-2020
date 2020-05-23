@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { ArrowButton } from "../service/arrowButton"
+import ArrowButton from "../arrowButton"
 
 const Company = ({ ...props }) => {
   return (
@@ -18,7 +18,9 @@ const Company = ({ ...props }) => {
         <tr>
           <Attr>住所</Attr>
           <Val>
-           {"東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"}
+            {
+              "東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"
+            }
           </Val>
         </tr>
         <tr>
@@ -30,7 +32,12 @@ const Company = ({ ...props }) => {
           <Val>info@stake.co.jp</Val>
         </tr>
       </Table>
-      <ArrowButton css= "margin: 0 auto 0;" lang="ja" to="/contact" label="お問い合わせ"/>
+      <ArrowButton
+        css="margin: 0 auto 0;"
+        lang="ja"
+        to="/contact"
+        label="お問い合わせ"
+      />
     </Container>
   )
 }
@@ -38,7 +45,7 @@ const Company = ({ ...props }) => {
 const Container = styled.div`
   padding: 90px 80px 149px;
   letter-spacing: 0px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   width: 100%;
   h1 {
     text-align: center;
@@ -48,7 +55,7 @@ const Container = styled.div`
   }
 `
 
-const Table= styled.table`
+const Table = styled.table`
   margin: 26px auto 67.5px;
   width: 100%;
   max-width: 700px;
@@ -60,7 +67,7 @@ const Table= styled.table`
   }
   tr {
     height: 80px;
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid #dedede;
     border-collapse: collapse;
   }
 `
@@ -70,7 +77,7 @@ const Attr = styled.td`
   padding-left: 30px;
   font: 16px/30px Noto Sans JP Regular;
   letter-spacing: 0px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   width: 172px;
 `
 
@@ -79,7 +86,7 @@ const Val = styled.td`
   padding-right: 30px;
   font: 16px/30px Noto Sans JP Regular;
   letter-spacing: 0px;
-  color: #7B7B7B;
+  color: #7b7b7b;
 `
 
-export default Company;
+export default Company

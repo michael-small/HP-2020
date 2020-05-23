@@ -1,85 +1,114 @@
 import React from "react"
 import styled from "styled-components"
+import { withTheme, useTheme } from "@material-ui/core"
 import Image from "../image"
 import { StyledLink as Link } from "../link"
 import { ArrowButton } from "./arrowButton"
+import Container from "../container"
 
-export default () => (
-  <>
-    <WhoText>Who We Are</WhoText>
-    <WhoDescription>
-    人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、人々にデータの検証可能性をもたらします。私たちは、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってよりよい社会を実現します。
-    </WhoDescription>
-    <div align="center" style={{ marginTop: "20px" }}>
-      <Link to="/company">
-        <ArrowButton label="詳しく見る" color="#1A1A1A" />
-      </Link>
-    </div>
-    <SupportedByText>Supported By</SupportedByText>
-    <SupporterArea>
-      <SupporterImage
-        filename="parity.png"
-        style={{ width: "100px", height: "100px" }}
-      />
-      <SupporterImage
-        filename="web3-foundation.png"
-        style={{ width: "180px", height: "62px" }}
-      />
-      <SupporterImage
-        filename="Berkeley.png"
-        style={{ width: "190px", height: "42px" }}
-      />
-      <SupporterImage
-        filename="LongHash.png"
-        style={{ width: "204px", height: "48px" }}
-      />
-      <SupporterImage
-        filename="CEL.png"
-        style={{ width: "86px", height: "94px" }}
-      />
-    </SupporterArea>
-  </>
-)
+export default () => {
+  return (
+    <Container>
+      <WhoText>Who We Are</WhoText>
+      <WhoDescription>
+        人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、人々にデータの検証可能性をもたらします。私たちは、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってよりよい社会を実現します。
+      </WhoDescription>
+      <div align="center" style={{ marginTop: "20px" }}>
+        <Link to="/company">
+          <ArrowButton label="詳しく見る" color="#1A1A1A" />
+        </Link>
+      </div>
+      <SupportedByText>Supported By</SupportedByText>
+      <SupporterArea>
+        <SupporterImage filename="parity.png" />
+        <SupporterImage filename="web3-foundation.png" />
+        <SupporterImage filename="Berkeley.png" />
+        <SupporterImage filename="LongHash.png" />
+        <SupporterImage filename="CEL.png" />
+      </SupporterArea>
+    </Container>
+  )
+}
 
-const WhoText = styled.div`
+const WhoText = withTheme(
+  styled.h1(
+    ({ theme }) => `
   margin-top: 140px;
   text-align: center;
   font: 700 60px/81px TT Commons;
   color: #1a1a1a;
+  ${theme.breakpoints.down("xs")} {
+    font-size: 40px;
+    line-height: 54px;
+    margin-top: 80px;
+  }
 `
-const WhoDescription = styled.div`
-  max-width: min(760px, calc(100% - 38px));
-  min-height: 135px;
-  margin: 0 auto auto;
-  margin-top: 28px;
+  )
+)
 
+const WhoDescription = withTheme(
+  styled.p(
+    ({ theme }) => `
+  margin-top: 28px;
   color: #7b7b7b;
   text-align: center;
   font: 16px/30px Noto Sans JP Regular;
   opacity: 1;
+  ${theme.breakpoints.down("xs")} {
+    font-size: 15px;
+    margin-top: 16px;
+  }
 `
+  )
+)
 
-const SupportedByText = styled.div`
+const SupportedByText = withTheme(
+  styled.h2(
+    ({ theme }) => `
   margin-top: 130px;
   color: #1a1a1a;
   text-align: center;
   font: 600 38px/52px TT Commons;
+  ${theme.breakpoints.down("xs")} {
+    font-size: 26px;
+    margin-top: 35px;
+  }
 `
+  )
+)
 
-const SupporterArea = styled.div`
+const SupporterArea = withTheme(
+  styled.div(
+    ({ theme }) => `
   margin-top: 20px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-bottom: 150px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-`
-
-const SupporterImage = styled(Image)`
-  && {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 40px;
+  ${theme.breakpoints.down("xs")} {
+    margin-bottom: 80px;
   }
 `
+  )
+)
+
+const SupporterImage = withTheme(
+  styled(Image).attrs(props => ({
+    objectFit: "contain",
+    ...props,
+  }))(
+    ({ theme }) => `
+  && {
+    width: 200px;
+    height: 100px;
+    margin: ${theme.spacing(3)}px;
+    ${theme.breakpoints.down("xs")} {
+      width: 140px;
+      height: 70px;
+      margin: ${theme.spacing(1)}px;
+    }
+  }
+`
+  )
+)
