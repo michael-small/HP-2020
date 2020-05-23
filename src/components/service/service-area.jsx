@@ -1,6 +1,7 @@
 import React from "react"
 // import Image from "../image"
 import styled from "styled-components"
+import _Container from "../container"
 import Koushori from "../../images/service/高処理性能.svg"
 import Agile from "../../images/service/アジャイル実装.svg"
 import Hannyousei from "../../images/service/汎用性.svg"
@@ -35,7 +36,7 @@ export default ({ ...props }) => {
       <ArrowButton
         label="お問い合わせ"
         to="/contact"
-        style={{ margin: "53px auto 0px" }}
+        style={{ margin: "53px auto 0px", maxWidth: "100%" }}
       />
 
       <Hr />
@@ -62,7 +63,7 @@ export default ({ ...props }) => {
       <ArrowButton
         label="お問い合わせ"
         to="/contact"
-        style={{ margin: "53px auto 0px" }}
+        style={{ margin: "53px auto 0px", maxWidth: "100%" }}
       />
       <Hr />
 
@@ -87,14 +88,15 @@ export default ({ ...props }) => {
       <ArrowButton
         label="お問い合わせ"
         to="/contact"
-        style={{ margin: "53px auto 0px" }}
+        style={{ margin: "53px auto 53px", maxWidth: "100%" }}
       />
     </Container>
   )
 }
 
-const Container = styled.div`
-  padding: 117px 150px 83px;
+const Container = styled(_Container)`
+  padding-top: 117px
+  padding-bottom: 83px;
   background-color: #FFFFF;
   letter-spacing: 0px;
   color: #1a1a1a;

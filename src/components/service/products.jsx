@@ -2,6 +2,7 @@ import React from "react"
 import Image from "../image"
 import styled from "styled-components"
 import ArrowButton from "../arrowButton"
+import _Container from "../container"
 import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "../card"
 import ProductCards from "../product-cards"
@@ -18,7 +19,7 @@ export default ({ ...props }) => {
   )
 }
 
-const Container = styled.div`
+const Container = styled(_Container)`
   padding-top: 110px;
   padding-bottom: 106px;
   background-color: #f5f5f5;
