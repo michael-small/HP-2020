@@ -1,6 +1,8 @@
 import React from "react"
 import Image from "../image"
 import styled from "styled-components"
+import {withTheme} from "@material-ui/core"
+import localTheme from "./theme"
 import _Container from "../container"
 import { StyledLink as Link } from "../link"
 
@@ -78,20 +80,14 @@ export default ({ ...props }) => {
   )
 }
 
-const Container = styled(_Container)`
-  padding-top: 92px;
+const Container = withTheme(styled(_Container)`
+  ${localTheme}
   paddint-bottom: 116px;
   background-color: #1a1a1a;
   letter-spacing: 0px;
   color: #ffffff;
   width: 100%;
-  & h1 {
-    text-align: center;
-    margin: 0px auto 0px;
-    font: 60px/81px TT Commons;
-    font-weight: Bold;
-  }
-`
+`)
 
 const FlexConteiner = styled.div`
   display: flex;
@@ -108,13 +104,15 @@ const FlexItem = styled.div`
   text-align: left;
 `
 
-const Name = styled.p`
+const Name = styled.span`
+  display: block;
   margin: 5px auto 0px;
   font: inherit;
   color: #ffffff;
 `
 
-const Job = styled.p`
+const Job = styled.span`
+  display: block;
   font: inherit;
   color: #9b9b9b;
 `

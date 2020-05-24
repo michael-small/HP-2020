@@ -53,10 +53,10 @@ const HeaderContent = withTheme(styled.div`
     font: 16px/30px Noto Sans JP Regular;
   }
   ${props=>props.theme.breakpoints.down("xs")} {
-    margin-top: 124px 
+    margin-top: 124px;
     & h1 {
       font-size: 40px;
-      font-weight: 54px;
+      line-height: 54px;
     }
     & p {
       margin-top: 31px;

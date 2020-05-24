@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import AngleDown from "../images/icons/arrow-down.inline.svg"
+import Container from "./container"
 import { StyledLink as Link } from "./link"
 
 /*
@@ -16,7 +17,7 @@ import { StyledLink as Link } from "./link"
 export default ({ labels, ...props }) => {
   if (!!labels)
     return (
-      <div style={{ overflow: "scroll" }}>
+      <div>
         <Wrapper>
           {/* <NavLine/> */}
           {labels.map((item, index) => (
@@ -32,18 +33,18 @@ export default ({ labels, ...props }) => {
     )
 }
 
-const Wrapper = styled.div`
-   {
-    width: calc(100% - 50px);
+const Wrapper = styled(Container)`
+  {
+    width: 100%;
     padding-top: 46px;
     padding-bottom: 44px;
     min-height: 140px;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
     justify-content: safe center;
-    alint-items: center;
+    align-items: center;
+    overflow: hidden;
   }
 `
 const NavLabel = ({ children, ...props }) => {
