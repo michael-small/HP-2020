@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import _Container from "../container"
 import ArrowButton from "../arrowButton"
 
 const Company = ({ ...props }) => {
@@ -42,8 +43,9 @@ const Company = ({ ...props }) => {
   )
 }
 
-const Container = styled.div`
-  padding: 90px 80px 149px;
+const Container = styled(_Container)`
+  padding-top: 90px;
+  padding-bottom: 149px;
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;

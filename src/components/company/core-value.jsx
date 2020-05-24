@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import _Container from "../container"
 import BePassionateSVG from "../../images/company/be-passionate.svg"
 import BeGlobalSVG from "../../images/company/be-global.svg"
 
@@ -33,8 +34,9 @@ export default ({ ...props }) => {
   )
 }
 
-const Container = styled.div`
-  padding: 134px 80px 80px;
+const Container = styled(_Container)`
+  padding-top: 134px;
+  padding-bottom:80px;
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;

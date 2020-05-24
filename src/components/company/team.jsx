@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "../image"
 import styled from "styled-components"
+import _Container from "../container"
 import { StyledLink as Link } from "../link"
 
 export default ({ ...props }) => {
@@ -77,8 +78,9 @@ export default ({ ...props }) => {
   )
 }
 
-const Container = styled.div`
-  padding: 92px 80px 116px;
+const Container = styled(_Container)`
+  padding-top: 92px;
+  paddint-bottom: 116px;
   background-color: #1a1a1a;
   letter-spacing: 0px;
   color: #ffffff;
