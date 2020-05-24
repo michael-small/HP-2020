@@ -1,26 +1,20 @@
 import React from "react"
-import Image from "../image"
+import { withTheme, useMediaQuery, useTheme } from "@material-ui/core"
+import _Image from "../image"
 import _Container from "../container"
+import localTheme from "./theme"
 import Background from "../background"
 import styled from "styled-components"
 import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "../card"
 
 export default ({ ...props }) => {
-  return (
-    <Container {...props}>
-      <Image
-        filename="company/vision.png"
-        style={{
-          position: "absolute",
-          width: "700px",
-          height: "auto",
-          bottom: "0px",
-          right: "0px",
-          opacity: 0.4,
-        }}
-      />
+  const theme = useTheme();
+  const downXs = useMediaQuery(theme.breakpoints.down("xs"));
 
+  return (
+    <Bg {...props}>
+    <Container>
       <h1>Vision</h1>
       <h2>Web3.0を実現する</h2>
       <p>
@@ -34,35 +28,49 @@ export default ({ ...props }) => {
         技術そのものを知らなくてもブロックチェーンとWeb3.0が世の中に浸透すればそれが「当たり前のもの」になります。
         誰もが「当たり前に」テクノロジーの恩恵を正しく得られるようになります。我々は不可逆な変化を起こし、そんな変化を最前線で作っていきたいと考えています。
       </p>
+      <Image
+        filename="company/vision.png"
+        style={{position: downXs? "relative" : "absolute"}}
+      />
     </Container>
+    </Bg>
   )
 }
 
-const Container = styled(_Container)`
-  position: relative;
-  background-color: #F5F5F5;
-  padding-top: 110px;
-  padding-bottom: 129px; 
-  letter-spacing: 0px;
-  background-color:
-  color: #1A1A1A;
+const Bg = styled.div`
+background-color: #F5F5F5;
+`
+
+const Container = withTheme(styled(_Container)`
+  ${localTheme}
   width: 100%;
-  & h1{
-    text-align: center;
-    margin: 0px auto 0px;
-    font: Bold 60px/81px TT Commons;
-    font-weight: Bold;
+  position: relative;
+  padding-bottom: 129px;
+  // overflow: hidden;
+  * {
+    z-index: 2;
   }
-  & h2{
-    text-align: left;
-    margin: 54px auto 0px;
-    font: 35px/52px Noto Sans JP Bold;
-  }
-  & p{
-    text-align: left;
+  & p {
     max-width: 630px;
-    margin: 38px 0px 0px;
-    font: 16px/30px Noto Sans JP Regular;
-    color: #7B7B7B;
+  }
+  ${props=>props.theme.breakpoints.down("xs")} {
+    padding-bottom: 0px;
   }
 `
+)
+
+const Image = withTheme(styled(_Image)`
+  width: 700px;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.4;
+  z-index: 1;
+  ${props => props.theme.breakpoints.down("sm")}  {
+    opacity: 0.2;
+  }
+  ${props => props.theme.breakpoints.down("xs")}  {
+    width: 100vw;
+    height: 100vw;
+    opacity: 0.4;
+  }
+`)

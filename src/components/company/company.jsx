@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import {withTheme} from "@material-ui/core"
+import localTheme from "./theme"
 import _Container from "../container"
 import ArrowButton from "../arrowButton"
 
@@ -43,19 +45,15 @@ const Company = ({ ...props }) => {
   )
 }
 
-const Container = styled(_Container)`
-  padding-top: 90px;
+const Container = withTheme(styled(_Container)`
+  ${localTheme}
+  padding-top: 60px;
   padding-bottom: 149px;
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;
-  h1 {
-    text-align: center;
-    margin: 0px auto 0px;
-    font: 60px/81px TT Commons;
-    font-weight: Bold;
-  }
 `
+)
 
 const Table = styled.table`
   margin: 26px auto 67.5px;
@@ -77,6 +75,7 @@ const Table = styled.table`
 const Attr = styled.td`
   text-align: left;
   padding-left: 30px;
+  max-width: 30%;
   font: 16px/30px Noto Sans JP Regular;
   letter-spacing: 0px;
   color: #1a1a1a;

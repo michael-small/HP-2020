@@ -25,8 +25,9 @@ const NavBar = ({ ...props }) => {
 
 const NavBarBig = ({ isTopPage, ...props }) => {
   return (
+    <Spacer>
     <Wrapper isTopPage={isTopPage} {...props}>
-      <FlexContainer isTopPage={isTopPage} gi>
+      <FlexContainer isTopPage={isTopPage}>
         {!isTopPage ? (
           <Link
             to="/"
@@ -75,28 +76,40 @@ const NavBarBig = ({ isTopPage, ...props }) => {
         </FlexEnd>
       </FlexContainer>
     </Wrapper>
+    </Spacer>
   )
 }
 
-const Wrapper = styled.div`
-  // position: relative;
+const Spacer = styled.div`
   width: 100%;
   height: 60px;
 `
 
-const FlexContainer = styled(Container)`
+const Wrapper = styled.div`
+  width: 100%;
+  height: 60px;
+  overflow-x: scroll;
+  box-shadow: 0 4px 10px -10px #000;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
   ${props =>
     props.isTopPage
-      ? css`
-          color: #ffffff;
-        `
-      : css`
-          background-color: #ffffff;
-          color: #1a1a1a;
-          position: fixed;
-          z-index: 1100;
-        `}
-  box-shadow: 0 4px 10px -10px #000;
+    ? css`
+      color: #ffffff;
+    `
+    : css`
+      color: #1a1a1a;
+      position: fixed;
+      background-color: #ffffff;
+      z-index: 1100;
+    `
+  }
+`
+
+const FlexContainer = styled(Container)`
+  width: 100%;
   display: flex;
   height: 60px;
   margin: 0 auto 0;

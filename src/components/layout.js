@@ -161,6 +161,10 @@ input, select {
   vertical-align:middle;
 }
 
+::-webkit-scrollbar{
+  width: 0px;
+}
+
 `
 
 Layout.propTypes = {
