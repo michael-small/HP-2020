@@ -50,6 +50,13 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-133165301-2",
+      },
+    },
     `gatsby-theme-material-ui`,
     `gatsby-plugin-cname`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
