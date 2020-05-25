@@ -2,35 +2,36 @@ name: PR
 on: [pull_request]
 
 jobs:
-  lint:
-    name: Linting
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: lint
-      run: |
-        yarn
-        yarn lint
-  build_code:
-    name: Build Code
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: build
-      run: |
-        yarn
-        yarn build
+  jobs:
+    build-deploy:
+      runs-on: ubuntu-18.04
+      steps:
+      - uses: actions/checkout@v2
+  
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+  
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+  
+      - name: gatsby install
+        run: npm install -g gatsby-cli
+  
+      - name: install
+        run: npm install
+  
+      - name: format
+        run: npm run format
+  
+      # - name: test
+      #   run: npm run test
+  
+      - name: build
+        run: npm run build
