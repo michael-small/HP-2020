@@ -41,10 +41,10 @@ const HeaderContent = withTheme(styled.div`
   width: 100%;
   max-width: 753px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0px;
   & h1 {
-    color: #FFFFFF;
+    color: #ffffff;
     font: 60px/81px TT Commons Light;
   }
   & p {
@@ -52,7 +52,7 @@ const HeaderContent = withTheme(styled.div`
     color: #cccccc;
     font: 16px/30px Noto Sans JP Regular;
   }
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     margin-top: 124px;
     & h1 {
       font-size: 40px;

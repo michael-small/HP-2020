@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {withTheme} from "@material-ui/core"
+import { withTheme } from "@material-ui/core"
 import localTheme from "./theme"
 import _Container from "../container"
 import ArrowButton from "../arrowButton"
@@ -52,41 +52,51 @@ const Container = withTheme(styled(_Container)`
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;
-`
-)
+`)
 
-const Table = styled.table`
+const Table = withTheme(styled.table`
   margin: 26px auto 67.5px;
+  font: 16px/30px Noto Sans JP Regular;
+  text-align: left;
+  letter-spacing: 0px;
   width: 100%;
   max-width: 700px;
   td {
     vertical-align: middle;
     margin: auto 0 auto;
-    padding-top: 26px;
-    padding-bottom: 25px;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
   }
   tr {
-    height: 80px;
+    height: 5em;
     border-bottom: 1px solid #dedede;
     border-collapse: collapse;
   }
-`
+  ${props => props.theme.breakpoints.down("xs")} {
+    tr {
+      display: block;
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    td {
+      display: block;
+      border: none;
+      padding: 0.25em 0.75em;
+    }
+  }
+`)
 
 const Attr = styled.td`
-  text-align: left;
-  padding-left: 30px;
+  padding-left: 1.5em;
   max-width: 30%;
-  font: 16px/30px Noto Sans JP Regular;
-  letter-spacing: 0px;
   color: #1a1a1a;
   width: 172px;
 `
 
 const Val = styled.td`
   text-align: left;
-  padding-right: 30px;
-  font: 16px/30px Noto Sans JP Regular;
-  letter-spacing: 0px;
+  padding-right: 1.5em;
   color: #7b7b7b;
 `
 

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {withTheme} from "@material-ui/core"
+import { withTheme } from "@material-ui/core"
 import localTheme from "./theme"
 import _Container from "../container"
 import BePassionateSVG from "../../images/company/be-passionate.svg"
@@ -41,8 +41,7 @@ const Container = withTheme(styled(_Container)`
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;
-`
-)
+`)
 
 const FlexConteiner = styled.div`
   display: flex;

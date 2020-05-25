@@ -1,8 +1,8 @@
 import { css } from "styled-components"
 
 const theme = css`
-   overflow: hidden;
-   & h1 {
+  overflow: hidden;
+  & h1 {
     display: inline-block;
     text-align: center;
     margin: 110px auto 0px;
@@ -47,8 +47,8 @@ const theme = css`
       line-height: 22px;
     }
     & h3 {
-        font-size: 20px;
-        line-height: 30px;
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 `

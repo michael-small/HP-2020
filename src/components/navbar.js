@@ -26,56 +26,56 @@ const NavBar = ({ ...props }) => {
 const NavBarBig = ({ isTopPage, ...props }) => {
   return (
     <Spacer>
-    <Wrapper isTopPage={isTopPage} {...props}>
-      <FlexContainer isTopPage={isTopPage}>
-        {!isTopPage ? (
-          <Link
-            to="/"
-            style={{
-              display: "block",
-              height: "90%",
-              margin: "auto auto auto 0px",
-            }}
-          >
-            <img src={StakeLogo} style={{ height: "100%" }} />
-          </Link>
-        ) : (
-          []
-        )}
-        <FlexEnd>
-          <NavItem>
-            <Link to="/service">Service</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/media">Media</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/company">Company</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/career">Career</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/contact">Contact</Link>
-          </NavItem>
-          <Line />
-          <NavItem style={{ minWidth: 74, whiteSpace: "nowrap" }}>
-            <Link to="/">
-              <Globe
-                height="16px"
-                style={{
-                  fill: "currentColor",
-                  display: "inline",
-                  verticalAlign: "top",
-                  marginRight: "6px",
-                }}
-              />
-              English
+      <Wrapper isTopPage={isTopPage} {...props}>
+        <FlexContainer isTopPage={isTopPage}>
+          {!isTopPage ? (
+            <Link
+              to="/"
+              style={{
+                display: "block",
+                height: "90%",
+                margin: "auto auto auto 0px",
+              }}
+            >
+              <img src={StakeLogo} style={{ height: "100%" }} />
             </Link>
-          </NavItem>
-        </FlexEnd>
-      </FlexContainer>
-    </Wrapper>
+          ) : (
+            []
+          )}
+          <FlexEnd>
+            <NavItem>
+              <Link to="/service">Service</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/media">Media</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/company">Company</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/career">Career</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/contact">Contact</Link>
+            </NavItem>
+            <Line />
+            <NavItem style={{ minWidth: 74, whiteSpace: "nowrap" }}>
+              <Link to="/">
+                <Globe
+                  height="16px"
+                  style={{
+                    fill: "currentColor",
+                    display: "inline",
+                    verticalAlign: "top",
+                    marginRight: "6px",
+                  }}
+                />
+                English
+              </Link>
+            </NavItem>
+          </FlexEnd>
+        </FlexContainer>
+      </Wrapper>
     </Spacer>
   )
 }
@@ -96,16 +96,15 @@ const Wrapper = styled.div`
   -ms-overflow-style: none;
   ${props =>
     props.isTopPage
-    ? css`
-      color: #ffffff;
-    `
-    : css`
-      color: #1a1a1a;
-      position: fixed;
-      background-color: #ffffff;
-      z-index: 1100;
-    `
-  }
+      ? css`
+          color: #ffffff;
+        `
+      : css`
+          color: #1a1a1a;
+          position: fixed;
+          background-color: #ffffff;
+          z-index: 1100;
+        `}
 `
 
 const FlexContainer = styled(Container)`

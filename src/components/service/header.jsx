@@ -23,14 +23,6 @@ export default () => (
   </HeaderBackground>
 )
 
-const Wrapper = styled.div`
-  position: relative;
-  background-color: rgba(0, 0, 0);
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-`
-
 const HeaderBackground = styled(Background)`
   && {
     min-height: 100vh;
