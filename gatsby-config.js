@@ -7,6 +7,7 @@ module.exports = {
     author: `Task Ohmori`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,14 +35,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/stake-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typescript`,
-      options: {
-        isTSX: true, // defaults to false
-        // jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
       },
     },
     {
