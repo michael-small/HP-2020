@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography"
 import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
 import MenuIcon from "@material-ui/icons/Menu"
+import { StyledLink as PageLink } from "./link"
 import {
   Button,
   Drawer,
@@ -32,33 +33,33 @@ import CloseIcon from "@material-ui/icons/Close"
 
 // add the page links in here, I know it's a very hacky way to do this
 const MOCK_PAGE_LINKS = {
-  products: "",
-  development: "",
-  RnD: "",
-  consulting: "",
+  products: "/service#products",
+  development: "/service#development",
+  RnD: "/service#rd",
+  consulting: "/service#consulting",
 
   media: "/media",
 
-  vision: "",
-  team: "",
-  value: "",
-  company: "",
-  career: "",
-  contact: "",
-  lang: "",
+  vision: "/company#vision",
+  team: "/company#team",
+  value: "/company#value",
+  company: "/company#company",
+  career: "/career",
+  contact: "/contact",
+  lang: "/",
 }
 
 const SNS_LINKS = {
   github: "https://github.com/staketechnologies",
   twitter: "https://twitter.com/staketech",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/company/staked-technologies/",
   medium: "https://medium.com/stake-technologies",
 }
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     navbarRoot: {
-      backgroundColor: "transparent",
+      backgroundColor: "black",
       backdropFilter: "blur(7px)",
     },
     grow: {
@@ -97,10 +98,6 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const pageRedirect = (path: string) => {
-  console.log("going to " + path)
-}
-
 interface MenuBtnProp {
   isMobile: boolean
 }
@@ -129,30 +126,26 @@ const ServiceMenuButton: React.FC<MenuBtnProp> = ({ isMobile }) => {
                   disablePadding
                   className={classes.nestedItem}
                 >
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.products)}
-                  >
-                    <ListItemText primary="Products" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.development)}
-                  >
-                    <ListItemText primary="Development" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.RnD)}
-                  >
-                    <ListItemText primary="R&D" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.consulting)}
-                  >
-                    <ListItemText primary="Consulting" />
-                  </ListItem>
+                  <PageLink to={MOCK_PAGE_LINKS.products}>
+                    <ListItem button>
+                      <ListItemText primary="Products" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.development}>
+                    <ListItem button>
+                      <ListItemText primary="Development" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.RnD}>
+                    <ListItem button>
+                      <ListItemText primary="R&D" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.consulting}>
+                    <ListItem button>
+                      <ListItemText primary="Consulting" />
+                    </ListItem>
+                  </PageLink>
                 </List>
               </Collapse>
             </>
@@ -162,24 +155,18 @@ const ServiceMenuButton: React.FC<MenuBtnProp> = ({ isMobile }) => {
                 Service
               </Button>
               <Menu {...bindMenu(popupState)}>
-                <MenuItem
-                  onClick={() => pageRedirect(MOCK_PAGE_LINKS.products)}
-                >
-                  Products
-                </MenuItem>
-                <MenuItem
-                  onClick={() => pageRedirect(MOCK_PAGE_LINKS.development)}
-                >
-                  Development
-                </MenuItem>
-                <MenuItem onClick={() => pageRedirect(MOCK_PAGE_LINKS.RnD)}>
-                  R&D
-                </MenuItem>
-                <MenuItem
-                  onClick={() => pageRedirect(MOCK_PAGE_LINKS.consulting)}
-                >
-                  Consulting
-                </MenuItem>
+                <PageLink to={MOCK_PAGE_LINKS.products}>
+                  <MenuItem>Products</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.development}>
+                  <MenuItem>Development</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.RnD}>
+                  <MenuItem>R&D</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.consulting}>
+                  <MenuItem>Consulting</MenuItem>
+                </PageLink>
               </Menu>
             </>
           )}
@@ -213,30 +200,26 @@ const CompanyMenuButton: React.FC<MenuBtnProp> = ({ isMobile }) => {
                   disablePadding
                   className={classes.nestedItem}
                 >
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.vision)}
-                  >
-                    <ListItemText primary="Vision" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.team)}
-                  >
-                    <ListItemText primary="Team" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.value)}
-                  >
-                    <ListItemText primary="Value" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => pageRedirect(MOCK_PAGE_LINKS.company)}
-                  >
-                    <ListItemText primary="Company" />
-                  </ListItem>
+                  <PageLink to={MOCK_PAGE_LINKS.vision}>
+                    <ListItem button>
+                      <ListItemText primary="Vision" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.team}>
+                    <ListItem button>
+                      <ListItemText primary="Team" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.value}>
+                    <ListItem button>
+                      <ListItemText primary="Value" />
+                    </ListItem>
+                  </PageLink>
+                  <PageLink to={MOCK_PAGE_LINKS.company}>
+                    <ListItem button>
+                      <ListItemText primary="Company" />
+                    </ListItem>
+                  </PageLink>
                 </List>
               </Collapse>
             </>
@@ -246,18 +229,18 @@ const CompanyMenuButton: React.FC<MenuBtnProp> = ({ isMobile }) => {
                 Company
               </Button>
               <Menu {...bindMenu(popupState)}>
-                <MenuItem onClick={() => pageRedirect(MOCK_PAGE_LINKS.vision)}>
-                  Vision
-                </MenuItem>
-                <MenuItem onClick={() => pageRedirect(MOCK_PAGE_LINKS.team)}>
-                  Team
-                </MenuItem>
-                <MenuItem onClick={() => pageRedirect(MOCK_PAGE_LINKS.value)}>
-                  Value
-                </MenuItem>
-                <MenuItem onClick={() => pageRedirect(MOCK_PAGE_LINKS.company)}>
-                  Company
-                </MenuItem>
+                <PageLink to={MOCK_PAGE_LINKS.vision}>
+                  <MenuItem>Vision</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.team}>
+                  <MenuItem>Team</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.value}>
+                  <MenuItem>Value</MenuItem>
+                </PageLink>
+                <PageLink to={MOCK_PAGE_LINKS.company}>
+                  <MenuItem>Company</MenuItem>
+                </PageLink>
               </Menu>
             </>
           )}
@@ -311,22 +294,34 @@ export default function Navbar() {
         }
       >
         <ServiceMenuButton isMobile={true} />
-        <ListItem button onClick={() => pageRedirect(MOCK_PAGE_LINKS.media)}>
-          <ListItemText primary="Media" />
-        </ListItem>
+
+        <PageLink to={MOCK_PAGE_LINKS.media}>
+          <ListItem button>
+            <ListItemText primary="Media" />
+          </ListItem>
+        </PageLink>
+
         <CompanyMenuButton isMobile={true} />
-        <ListItem button onClick={() => pageRedirect(MOCK_PAGE_LINKS.career)}>
-          <ListItemText primary="Career" />
-        </ListItem>
-        <ListItem button onClick={() => pageRedirect(MOCK_PAGE_LINKS.contact)}>
-          <ListItemText primary="Contact" />
-        </ListItem>
-        <ListItem button onClick={() => pageRedirect(MOCK_PAGE_LINKS.lang)}>
-          <ListItemIcon>
-            <LanguageIcon style={{ color: "white" }} />
-          </ListItemIcon>
-          <ListItemText primary="日本語" />
-        </ListItem>
+        <PageLink to={MOCK_PAGE_LINKS.career}>
+          <ListItem button>
+            <ListItemText primary="Career" />
+          </ListItem>
+        </PageLink>
+
+        <PageLink to={MOCK_PAGE_LINKS.contact}>
+          <ListItem button>
+            <ListItemText primary="Contact" />
+          </ListItem>
+        </PageLink>
+
+        <PageLink to={MOCK_PAGE_LINKS.lang}>
+          <ListItem button>
+            <ListItemIcon>
+              <LanguageIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText primary="日本語" />
+          </ListItem>
+        </PageLink>
       </List>
       <div className={classes.mobileMediaLinks}>
         <Link target="_blank" rel="noopener noreferrer" href={SNS_LINKS.github}>
@@ -370,32 +365,23 @@ export default function Navbar() {
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <ServiceMenuButton isMobile={false} />
-              <Button
-                color="inherit"
-                onClick={() => pageRedirect(MOCK_PAGE_LINKS.media)}
-              >
-                Media
-              </Button>
+              <PageLink to={MOCK_PAGE_LINKS.media}>
+                <Button color="inherit">Media</Button>
+              </PageLink>
+
               <CompanyMenuButton isMobile={false} />
-              <Button
-                color="inherit"
-                onClick={() => pageRedirect(MOCK_PAGE_LINKS.career)}
-              >
-                Career
-              </Button>
-              <Button
-                color="inherit"
-                onClick={() => pageRedirect(MOCK_PAGE_LINKS.contact)}
-              >
-                Contact
-              </Button>
-              <Button
-                color="inherit"
-                onClick={() => pageRedirect(MOCK_PAGE_LINKS.lang)}
-              >
-                <LanguageIcon />
-                <Typography>English</Typography>
-              </Button>
+              <PageLink to={MOCK_PAGE_LINKS.career}>
+                <Button color="inherit">Career</Button>
+              </PageLink>
+              <PageLink to={MOCK_PAGE_LINKS.contact}>
+                <Button color="inherit">Contact</Button>
+              </PageLink>
+              <PageLink to={MOCK_PAGE_LINKS.lang}>
+                <Button color="inherit">
+                  <LanguageIcon />
+                  <Typography>English</Typography>
+                </Button>
+              </PageLink>
             </div>
             <div className={classes.sectionMobile}>
               <IconButton
