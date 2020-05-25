@@ -26,14 +26,14 @@ export default ({ ...props }) => {
       </p>
       <h3>提供価値</h3>
       <FlexContainer>
-      <FlexItem>
+        <FlexItem>
           <img src={Koushori} width="100%" />
           <h4>高処理性能</h4>
-          </FlexItem>
-          <FlexItem>
-          <img src={Agile} width="100%"/>
+        </FlexItem>
+        <FlexItem>
+          <img src={Agile} width="100%" />
           <h4>アジャイル実装</h4>
-          </FlexItem>
+        </FlexItem>
       </FlexContainer>
       <ArrowButton
         label="お問い合わせ"
@@ -53,14 +53,14 @@ export default ({ ...props }) => {
       <h3>提供価値</h3>
 
       <FlexContainer>
-      <FlexItem>
+        <FlexItem>
           <img src={Koushori} width="100%" />
           <h4>処理性能の改善</h4>
-          </FlexItem>
-          <FlexItem>
+        </FlexItem>
+        <FlexItem>
           <img src={Agile} width="100%" />
           <h4>秘匿化</h4>
-          </FlexItem>
+        </FlexItem>
       </FlexContainer>
       <ArrowButton
         label="お問い合わせ"
@@ -81,7 +81,7 @@ export default ({ ...props }) => {
         <FlexItem>
           <img src={Domain} width="100%" />
           <h4>ブロックチェーンのドメイン知識</h4>
-          </FlexItem>
+        </FlexItem>
         <FlexItem>
           <img src={Hannyousei} width="100%" />
           <h4>汎用性</h4>
@@ -99,12 +99,11 @@ export default ({ ...props }) => {
 const Container = withTheme(styled(_Container)`
   ${localTheme}
   padding-bottom: 128px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   letter-spacing: 0px;
   color: #1a1a1a;
   width: 100%;
-`
-)
+`)
 
 const FlexContainer = styled.div`
   display: flex;
@@ -127,7 +126,7 @@ const Hr = withTheme(styled.div`
   height: 0px;
   border: 1px solid #cccccc;
   opacity: 1;
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     margin-top: 58px;
   }
 `)

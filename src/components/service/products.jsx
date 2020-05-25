@@ -26,20 +26,20 @@ export default ({ ...props }) => {
 
 const Container = withTheme(
   styled(_Container)`
-  ${localTheme}
-  padding-bottom: 106px;
-  background-color: #f5f5f5;
-  letter-spacing: 0px;
-  color: #1a1a1a;
-  width: 100%;
-  & h1{
-    display: block;
-  }
-  ${props => props.theme.breakpoints.down("xs")} {
-    padding-bottom: 81px;
-   & h1 {
-     text-align: center;
-   }
-  }
-`
+    ${localTheme}
+    padding-bottom: 106px;
+    background-color: #f5f5f5;
+    letter-spacing: 0px;
+    color: #1a1a1a;
+    width: 100%;
+    & h1 {
+      display: block;
+    }
+    ${props => props.theme.breakpoints.down("xs")} {
+      padding-bottom: 81px;
+      & h1 {
+        text-align: center;
+      }
+    }
+  `
 )
