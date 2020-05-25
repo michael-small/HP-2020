@@ -1,12 +1,10 @@
 import React from "react"
-import Image from "../image"
 import styled from "styled-components"
 import { withTheme, useTheme, useMediaQuery } from "@material-ui/core"
 import ArrowButton from "../arrowButton"
 import localTheme from "./theme"
 import _Container from "../container"
 import { StyledLink as Link } from "../link"
-import { CardContainer, Card, CardContent, Logo } from "../card"
 import ProductCards from "../product-cards"
 
 export default ({ ...props }) => {
