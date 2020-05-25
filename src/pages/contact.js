@@ -3,7 +3,7 @@ import styled from "styled-components"
 import SEO from "../components/seo"
 import NavBar from "../components/navbar"
 import Layout from "../components/layout"
-import Image from "../components/image"
+import ComingSoon from "../components/coming-soon"
 
 const ContactPage = () => (
   <Layout>
@@ -12,15 +12,7 @@ const ContactPage = () => (
     <Container>
       <h1>Contact</h1>
     </Container>
-    <Image
-      filename="coming-soon.png"
-      style={{
-        width: "70%",
-        height: "70vh",
-        margin: "auto",
-        opacity: "0.2",
-      }}
-    />
+    <ComingSoon />
   </Layout>
 )
 
