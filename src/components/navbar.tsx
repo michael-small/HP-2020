@@ -59,7 +59,7 @@ const SNS_LINKS = {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     navbarRoot: {
-      backgroundColor: "black",
+      backgroundColor: "transparent",
       backdropFilter: "blur(7px)",
     },
     grow: {
@@ -250,7 +250,7 @@ const CompanyMenuButton: React.FC<MenuBtnProp> = ({ isMobile }) => {
   )
 }
 
-export default function Navbar() {
+export default function Navbar(props: any) {
   const classes = useStyles()
 
   const [isMobileMenu, setMobileMenu] = useState(false)
@@ -357,7 +357,7 @@ export default function Navbar() {
     <>
       <CssBaseline />
       <div className={classes.grow}>
-        <AppBar position="static" className={classes.navbarRoot}>
+        <AppBar position="static" className={classes.navbarRoot} style={props.isTopPage?{}:{backgroundColor: "white",color: "black"}}>
           <Toolbar>
             {/* <Typography className={classes.title} variant="h6" noWrap>
               Stake Technology
