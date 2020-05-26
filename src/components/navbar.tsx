@@ -8,6 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
 import MenuIcon from "@material-ui/icons/Menu"
 import { StyledLink as PageLink } from "./link"
+import StakeLogo from "../images/logo-slim.svg"
 import {
   Button,
   Drawer,
@@ -359,9 +360,16 @@ export default function Navbar(props: any) {
       <div className={classes.grow}>
         <AppBar position="static" className={classes.navbarRoot} style={props.isTopPage?{}:{backgroundColor: "white",color: "black"}}>
           <Toolbar>
-            {/* <Typography className={classes.title} variant="h6" noWrap>
-              Stake Technology
-            </Typography> */}
+            <PageLink
+              to="/"
+              style={{
+                display: props.isTopPage ? "none" : "block",
+                height: "90%",
+                margin: "auto auto auto 0px",
+              }}
+            >
+              <img src={StakeLogo} style={{ height: "100%" }} />
+            </PageLink>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <ServiceMenuButton isMobile={false} />
