@@ -11,23 +11,23 @@ import Company from "../components/company/company"
 
 const indexNavBarLabels = [
   {
-    to: "/company/#vision",
+    to: "/company#vision",
     label: "ビジョン",
   },
   {
-    to: "/company/#team",
+    to: "/company#team",
     label: "チーム",
   },
   {
-    to: "/company/#value",
+    to: "/company#value",
     label: "バリュー",
   },
   {
-    to: "/company/#company",
+    to: "/company#company",
     label: "会社概要",
   },
   {
-    to: "/company/#blog",
+    to: "/company#blog",
     label: "ブログ",
   },
 ]

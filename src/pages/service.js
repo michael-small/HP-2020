@@ -9,23 +9,23 @@ import ServiceArea from "../components/service/service-area"
 
 const navbarLabels = [
   {
-    to: "/service/#products",
+    to: "/service#products",
     label: "プロダクト",
   },
   {
-    to: "/service/#development",
+    to: "/service#development",
     label: "プロダクト開発",
   },
   {
-    to: "/service/#rd",
+    to: "/service#rd",
     label: "研究開発",
   },
   {
-    to: "/service/#consulting",
+    to: "/service#consulting",
     label: "技術コンサルティング",
   },
   {
-    to: "/service/#blog",
+    to: "/service#blog",
     label: "ブログ",
   },
 ]

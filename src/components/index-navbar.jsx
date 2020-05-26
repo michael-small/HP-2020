@@ -7,7 +7,7 @@ import { StyledLink as Link } from "./link"
 /*
 [
   {
-    to:"/service/#products",
+    to:"/service#products",
     label:"プロダクト",
   },
   ...
