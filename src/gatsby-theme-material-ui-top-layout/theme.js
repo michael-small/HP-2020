@@ -4,12 +4,27 @@ let theme = createMuiTheme({
   typography: {
     // Tell Material-UI what's the font-size on the html element is.
     htmlFontSize: 10,
+    fontFamily: [
+      'TT Commons',
+      'Noto Sans JP',
+    ].join(','),
   },
 })
 
 theme = createMuiTheme({
   ...theme,
   overrides: {
+    MuiButton: {
+      label: {
+        textTransform: "none",
+        fontSize: "1.8rem",
+      }
+    },
+    MuiTypography: {
+      body1: {
+        fontSize: "1.8rem",
+      }
+    },
     MuiContainer: {
       root: {
         [theme.breakpoints.up("sm")]: {
