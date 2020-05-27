@@ -41,16 +41,16 @@ const Footer = () => {
             </h1>
             <ul>
               <li>
-                <Link>全て</Link>
+                <Link to="/media">全て</Link>
               </li>
               <li>
-                <Link>プロダクト</Link>
+                <Link to="/media">プロダクト</Link>
               </li>
               <li>
-                <Link>研究開発</Link>
+                <Link to="/media">研究開発</Link>
               </li>
               <li>
-                <Link>技術コンサルティング</Link>
+                <Link to="/media">技術コンサルティング</Link>
               </li>
             </ul>
           </FooterItem>
