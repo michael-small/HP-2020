@@ -5,21 +5,75 @@ import localTheme from "../components/contact/theme"
 import SEO from "../components/seo"
 import NavBar from "../components/navbar"
 import Layout from "../components/layout"
-import ComingSoon from "../components/coming-soon"
+import _Container from "../components/container"
+import ArrowButton from "../components/arrowButton"
 
-const ContactPage = () => (
-  <Layout>
-    <SEO title="Service" />
-    <NavBar />
-    <Container>
-      <h1>Contact</h1>
-    </Container>
-    <ComingSoon />
-  </Layout>
-)
+const ContactPage = () => {
+  const formRef = React.useRef(null)
+  console.log(formRef)
 
-const Container = withTheme(styled.div`
+  return (
+    <Layout>
+      <SEO title="Service" />
+      <NavBar />
+      <Container>
+        <h1>Contact</h1>
+        <form name="contact" method="POST" ref={formRef} netlify>
+          <label>
+            <p>お名前:</p>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <p>会社名:</p>
+            <input type="text" name="company" required />
+          </label>
+          <label>
+            <p>部署名:</p>
+            <input type="text" name="department" />
+          </label>
+          <label>
+            <p>役職:</p>
+            <input type="text" name="position" />
+          </label>
+          <label>
+            <p>Eメール:</p>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <p>お問い合わせ内容</p>
+            <textarea type="email" name="content" required />
+          </label>
+          <ArrowButton
+            label="送信する"
+            style={{ margin: "40px auto 0px" }}
+            onClick={() => {
+              if (formRef.current.reportValidity()) {
+                formRef.current.submit()
+              } else {
+                return
+              }
+            }}
+          />
+        </form>
+      </Container>
+    </Layout>
+  )
+}
+
+const Container = withTheme(styled(_Container)`
   ${localTheme}
+  max-width: 600px;
+  & input,
+  textarea {
+    font: 16px/30px Noto Sans JP Regular;
+    padding-left: 1em;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #cccccc;
+  }
+  & textarea {
+    height: 170px;
+  }
 `)
 
 export default ContactPage

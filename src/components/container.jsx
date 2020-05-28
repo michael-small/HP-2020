@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import styled from "styled-components"
+// import styled from "styled-components"
 import { Container as MuiContainer } from "@material-ui/core"
 
 const Container = props => <MuiContainer maxWidth="lg" {...props} />

@@ -368,7 +368,7 @@ export default function Navbar(props: any) {
                 margin: "auto auto auto 0px",
               }}
             >
-              <img src={StakeLogo} style={{ height: "100%" }} />
+              <img src={StakeLogo} alt="logo" style={{ height: "100%" }} />
             </PageLink>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>

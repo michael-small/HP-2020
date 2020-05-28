@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
 import localTheme from "./theme"
 import _Container from "../container"
-import { StyledLink as Link } from "../link"
 
 export default ({ ...props }) => {
   return (

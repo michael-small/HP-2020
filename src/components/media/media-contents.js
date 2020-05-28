@@ -7,7 +7,7 @@ import {
   ButtonRect as _ButtonRect,
   ButtonLabel as _ButtonLabel,
 } from "../arrowButton"
-import { makeStyles, withTheme } from "@material-ui/core"
+import { withTheme } from "@material-ui/core"
 import _Container from "../container"
 import LoadIcon from "../../images/icons/load.inline.svg"
 

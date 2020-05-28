@@ -1,12 +1,12 @@
 import React from "react"
-import { withTheme, useMediaQuery, useTheme, Box } from "@material-ui/core"
+import { withTheme, useMediaQuery, useTheme } from "@material-ui/core"
 import Background from "../background"
 import Image from "../image"
 import styled from "styled-components"
 import { ButtonRect, ButtonLabel, ArrowRightIcon } from "../arrowButton"
 
 import ProductCards from "../product-cards"
-import { StyledLink as Link } from "../link"
+// import { StyledLink as Link } from "../link"
 import Container from "../container"
 import { navigate } from "gatsby"
 
