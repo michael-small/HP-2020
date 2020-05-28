@@ -14,6 +14,7 @@ export default ({ ...props }) => {
         <FlexItem>
           <img
             src={BePassionateSVG}
+            alt="be passionate"
             width={200}
             height={230}
             style={{ display: "block", margin: "0 auto 0" }}
@@ -24,6 +25,7 @@ export default ({ ...props }) => {
         <FlexItem>
           <img
             src={BeGlobalSVG}
+            alt="be global"
             width={200}
             height={230}
             style={{ display: "block", margin: "0 auto 0" }}

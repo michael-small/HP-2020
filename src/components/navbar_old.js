@@ -37,7 +37,7 @@ const NavBarBig = ({ isTopPage, ...props }) => {
                 margin: "auto auto auto 0px",
               }}
             >
-              <img src={StakeLogo} style={{ height: "100%" }} />
+              <img src={StakeLogo} alt="logo" style={{ height: "100%" }} />
             </Link>
           ) : (
             []

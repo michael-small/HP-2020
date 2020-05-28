@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { withTheme, useTheme } from "@material-ui/core"
+import { withTheme } from "@material-ui/core"
 import Image from "../image"
 import { StyledLink as Link } from "../link"
 import { ArrowButton } from "./arrowButton"

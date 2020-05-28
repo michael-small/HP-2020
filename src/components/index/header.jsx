@@ -5,7 +5,7 @@ import Container from "../container"
 import HeaderVideo from "../../images/index/video_light.mp4"
 import HeaderImage from "../../images/video2.png"
 import { withTheme } from "@material-ui/core"
-import Image from "../image"
+// import Image from "../image"
 
 export default () => {
   return (

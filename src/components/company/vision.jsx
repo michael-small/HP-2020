@@ -3,10 +3,7 @@ import { withTheme, useMediaQuery, useTheme } from "@material-ui/core"
 import _Image from "../image"
 import _Container from "../container"
 import localTheme from "./theme"
-import Background from "../background"
 import styled from "styled-components"
-import { StyledLink as Link } from "../link"
-import { CardContainer, Card, CardContent, Logo } from "../card"
 
 export default ({ ...props }) => {
   const theme = useTheme()

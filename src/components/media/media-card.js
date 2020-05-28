@@ -1,7 +1,6 @@
 import React from "react"
 import {
   Card,
-  CardActionArea,
   CardMedia,
   CardActions,
   CardContent,
@@ -9,7 +8,6 @@ import {
   IconButton,
 } from "@material-ui/core"
 import ExternalLink from "../../images/icons/external-link.inline.svg"
-import _Container from "../container"
 
 const useStyles = makeStyles(theme => ({
   root: {

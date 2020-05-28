@@ -27,11 +27,11 @@ export default ({ ...props }) => {
       <h3>提供価値</h3>
       <FlexContainer>
         <FlexItem>
-          <img src={Koushori} width="100%" />
+          <img src={Koushori} alt="高処理性能" width="100%" />
           <h4>高処理性能</h4>
         </FlexItem>
         <FlexItem>
-          <img src={Agile} width="100%" />
+          <img src={Agile} alt="アジャイル実装" width="100%" />
           <h4>アジャイル実装</h4>
         </FlexItem>
       </FlexContainer>
@@ -54,11 +54,11 @@ export default ({ ...props }) => {
 
       <FlexContainer>
         <FlexItem>
-          <img src={Koushori} width="100%" />
+          <img src={Koushori} alt="処理性能の改善" width="100%" />
           <h4>処理性能の改善</h4>
         </FlexItem>
         <FlexItem>
-          <img src={Agile} width="100%" />
+          <img src={Agile} alt="秘匿化" width="100%" />
           <h4>秘匿化</h4>
         </FlexItem>
       </FlexContainer>
@@ -79,11 +79,11 @@ export default ({ ...props }) => {
       <h3>提供価値</h3>
       <FlexContainer>
         <FlexItem>
-          <img src={Domain} width="100%" />
+          <img src={Domain} alt="ブロックチェーンのドメイン知識" width="100%" />
           <h4>ブロックチェーンのドメイン知識</h4>
         </FlexItem>
         <FlexItem>
-          <img src={Hannyousei} width="100%" />
+          <img src={Hannyousei} alt="汎用性" width="100%" />
           <h4>汎用性</h4>
         </FlexItem>
       </FlexContainer>
