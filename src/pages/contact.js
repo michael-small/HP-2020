@@ -14,7 +14,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO title="Service" />
+      <SEO title="Contact" />
       <NavBar />
       <Container>
         <h1>Contact</h1>

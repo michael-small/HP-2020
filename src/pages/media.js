@@ -6,7 +6,7 @@ import MediaContents from "../components/media/media-contents"
 
 const MediaPage = () => (
   <Layout>
-    <SEO title="Service" />
+    <SEO title="Media" />
     <NavBar />
     <MediaContents />
   </Layout>
