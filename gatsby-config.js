@@ -30,9 +30,16 @@ module.exports = {
         path: `${__dirname}/content/media`,
       },
     },
-    `gatsby-plugin-tinacms`,
-    "gatsby-tinacms-json",
-    "gatsby-tinacms-git",
+    {
+      resolve: "gatsby-plugin-tinacms",
+      options: {
+        sidebar: {
+          hidden: process.env.NODE_ENV === "production",
+          position: "displace",
+        },
+        plugins: ["gatsby-tinacms-git", "gatsby-tinacms-json"],
+      },
+    },
     "gatsby-transformer-json",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
