@@ -22,6 +22,7 @@ exports.sourceNodes = async ({
     const result = await fetch(url)
     const text = await result.text()
     const $ = cheerio.load(text)
+    const datetime = $("#main").find("time").attr("datetime")
     const meta = $("meta[property]")
       .map((i, el) => ({
         property: $(el).attr("property"),
@@ -34,8 +35,9 @@ exports.sourceNodes = async ({
     return createNode({
       //custom field
       og: resultData.og,
+      datetime,
       // required fields
-      id: id? id :resultData.og.url,
+      id: id ? id : resultData.og.url,
       parent: null,
       children: [],
       internal: {
@@ -44,16 +46,14 @@ exports.sourceNodes = async ({
       },
     })
   }
-//   for(item of urls) {
-//     const url = item.url
-//     console.log(await createOgFromUrl(url))
-//   }
+  //   for(item of urls) {
+  //     const url = item.url
+  //     console.log(await createOgFromUrl(url))
+  //   }
   await Promise.all(
-    urls.map(async (item,index) => {
+    urls.map(async (item, index) => {
       const url = item.url
-      await createOgFromUrl(url,index.toString())
+      await createOgFromUrl(url, index.toString())
     })
   )
 }
-
-
