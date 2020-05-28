@@ -7,7 +7,7 @@ import ComingSoon from "../components/coming-soon"
 
 const PrivacyPolicyPage = () => (
   <Layout>
-    <SEO title="Service" />
+    <SEO title="Privacy Policy" />
     <NavBar />
     <Container>
       <h1>Privacy Policy</h1>

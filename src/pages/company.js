@@ -34,7 +34,7 @@ const indexNavBarLabels = [
 
 const CompanyPage = () => (
   <Layout>
-    <SEO title="Service" />
+    <SEO title="Company" />
     <NavBar />
     <Header />
     <IndexNavBar labels={indexNavBarLabels} />

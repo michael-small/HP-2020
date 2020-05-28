@@ -11,7 +11,7 @@ import Header from "../components/career/header"
 
 const CareerPage = () => (
   <Layout>
-    <SEO title="Service" />
+    <SEO title="Career" />
     <NavBar />
     <Header />
     <Bg>
