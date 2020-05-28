@@ -23,6 +23,17 @@ module.exports = {
         path: `${__dirname}/src/fonts/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "media",
+        path: `${__dirname}/content/media`,
+      },
+    },
+    `gatsby-plugin-tinacms`,
+    "gatsby-tinacms-json",
+    "gatsby-tinacms-git",
+    "gatsby-transformer-json",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -7,7 +7,9 @@ export default ({ to, label, ...props }) => {
   return (
     <ButtonRect
       onClick={() => {
-        navigate(to)
+        if (to) {
+          navigate(to)
+        }
       }}
       {...props}
     >
@@ -45,7 +47,7 @@ export const ButtonRect = styled.div(
   opacity: 1;
   font-weight: ${props.lang === "en" ? 500 : "Normal"};
   font-family: ${props.lang === "en" ? "TT Commons" : "Noto Sans JP Regular"};
-  font-size: ${props.lang === "en" ? "1.6rem" : "2.2rem"}
+  font-size: ${props.lang === "en" ? "1.6rem" : "2.2rem"};
 `
 )
 

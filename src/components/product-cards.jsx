@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "./image"
-import styled from "styled-components"
+// import styled from "styled-components"
 // import { StyledLink as Link } from "../link"
 import { CardContainer, Card, CardContent, Logo } from "./card"
 
