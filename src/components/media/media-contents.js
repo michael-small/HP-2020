@@ -1,21 +1,24 @@
 import React from "react"
 import { useLocalJsonForm } from "gatsby-tinacms-json"
+import MediaCard from "./media-card"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import {
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardActions,
-  CardContent,
-  makeStyles,
-  IconButton,
-  withTheme,
-} from "@material-ui/core"
-import ExternalLink from "../../images/icons/external-link.inline.svg"
+  ButtonRect as _ButtonRect,
+  ButtonLabel as _ButtonLabel,
+} from "../arrowButton"
+import { makeStyles, withTheme } from "@material-ui/core"
 import _Container from "../container"
+import LoadIcon from "../../images/icons/load.inline.svg"
+
+const GroupItems = 12
 
 const MediaContents = props => {
+  const [readGroupCount, setReadGroupCount] = React.useState(1)
+  function handleReadGroup() {
+    setReadGroupCount(count => count + 1)
+  }
+
   const query = useStaticQuery(graphql`
     query {
       mediaJson {
@@ -46,80 +49,24 @@ const MediaContents = props => {
     <Container>
       <h1>Media</h1>
       <GridContainer>
-        {query.allMediaOg.edges.map(edge => {
-          const node = edge.node
-          return <MediaCard node={node} key={edge.node.id} />
-        })}
+        {query.allMediaOg.edges
+          .slice(0, readGroupCount * GroupItems)
+          .map(edge => {
+            const node = edge.node
+            return <MediaCard node={node} key={edge.node.id} />
+          })}
       </GridContainer>
+      {readGroupCount * GroupItems < query.allMediaOg.edges.length ? (
+        <ButtonRect onClick={handleReadGroup}>
+          <ButtonLabel>
+            <LoadLeftIcon />
+            さらに読み込む
+          </ButtonLabel>
+        </ButtonRect>
+      ) : (
+        []
+      )}
     </Container>
-  )
-}
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: "#F5F5F5",
-    margin: "0px auto auto",
-    position: "relative",
-    maxWidth: 350,
-    minHeight: 370,
-    [theme.breakpoints.down("xs")]: {
-      maxWidth: 300,
-    },
-  },
-  content: {
-    "& h4": {
-      font: "18px/28px Noto Sans JP Bold",
-    },
-    "& p": {
-      marginTop: "11px",
-      font: "18px/30px TT Commons",
-      color: "#7B7B7B",
-    },
-    [theme.breakpoints.down("xs")]: {
-      "& p": {
-        fontSize: "15px",
-        lineHeight: "25px",
-      },
-    },
-  },
-  media: {
-    height: 180,
-    [theme.breakpoints.down("xs")]: {
-      height: 150,
-    },
-  },
-}))
-
-const MediaCard = ({ node }) => {
-  const classes = useStyles()
-
-  // console.log(node.og.image[0].url)
-  return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={node.og.image[0].url}
-          title={node.og.title}
-        />
-        <CardContent className={classes.content}>
-          <h4>{node.og.title}</h4>
-          <p>
-            {(datetime => {
-              const date = new Date(datetime)
-              return date.toLocaleDateString()
-            })(node.datetime)}
-          </p>
-        </CardContent>
-      </CardActionArea>
-      <CardActions style={{ position: "absolute", bottom: 0, right: 0 }}>
-        <a href={node.og.url}>
-          <IconButton>
-            <ExternalLink />
-          </IconButton>
-        </a>
-      </CardActions>
-    </Card>
   )
 }
 
@@ -172,9 +119,33 @@ const Container = withTheme(styled(_Container)`
     h1 {
       margin-top: 50px;
       font-size: 40px;
-      font-weight: 54px;
+      line-height: 54px;
     }
   }
 `)
+
+const ButtonRect = styled(_ButtonRect)`
+  width: 200px;
+  height: 46px;
+  border: 1px solid #1a1a1a;
+  margin: 46px auto 100px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+`
+
+const ButtonLabel = styled(_ButtonLabel)`
+  font: 15px/12px Noto Sans JP Regular;
+`
+export const LoadLeftIcon = styled(LoadIcon).attrs({
+  height: "1em",
+  width: "1em",
+  preserveAspectRatio: "xMinYMin slice",
+  overflow: "visible",
+})`
+  display: inline;
+  fill: currentColor;
+  vertical-align: -0.15em;
+  margin: auto 0.5em auto auto;
+`
 
 export default MediaContents
