@@ -1,7 +1,9 @@
 import React from "react"
+import Image from "gatsby-image"
+import styled from "styled-components"
+import { withTheme } from "@material-ui/core"
 import {
   Card,
-  CardMedia,
   CardActions,
   CardContent,
   makeStyles,
@@ -51,9 +53,8 @@ const MediaCard = ({ node }) => {
   return (
     <Card className={classes.root}>
       <CardMedia
-        className={classes.media}
-        image={node.og.image[0].url}
-        title={node.og.title}
+        fluid={node.featuredImg.childImageSharp.fluid}
+        alt={node.og.title}
       />
       <CardContent className={classes.content}>
         <h4>{node.og.title}</h4>
@@ -74,5 +75,15 @@ const MediaCard = ({ node }) => {
     </Card>
   )
 }
+
+const CardMedia = withTheme(
+  styled(Image)(props => ({
+    width: "100%",
+    height: 180,
+    [props.theme.breakpoints.down("xs")]: {
+      height: 150,
+    },
+  }))
+)
 
 export default MediaCard

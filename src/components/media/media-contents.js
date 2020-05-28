@@ -29,11 +29,15 @@ const MediaContents = props => {
         edges {
           node {
             datetime
+            featuredImg {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             og {
               description
-              image {
-                url
-              }
               title
               url
             }
