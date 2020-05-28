@@ -11,7 +11,8 @@ import { withTheme } from "@material-ui/core"
 import _Container from "../container"
 import LoadIcon from "../../images/icons/load.inline.svg"
 
-const GroupItems = 12
+// Initially reading items of media
+const GroupItems = 6
 
 const MediaContents = props => {
   const [readGroupCount, setReadGroupCount] = React.useState(1)
