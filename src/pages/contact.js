@@ -18,7 +18,14 @@ const ContactPage = () => {
       <NavBar />
       <Container>
         <h1>Contact</h1>
-        <form name="contact" method="POST" ref={formRef} netlify>
+        <form
+          name="contact"
+          method="POST"
+          ref={formRef}
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <label>
             <p>お名前:</p>
             <input type="text" name="name" required />
