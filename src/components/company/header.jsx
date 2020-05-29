@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
-import Image from "../image"
+import Image from "../background"
 import Container from "../container"
 
 export default () => (

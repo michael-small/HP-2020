@@ -7,7 +7,7 @@ import { isMobile } from "react-device-detect"
 import useComponentSize from "@rehooks/component-size"
 // import HeaderImage from "../../images/video2.png"
 import { withTheme } from "@material-ui/core"
-import Image from "../image"
+import Image from "../background"
 
 export default () => {
   const headerHeightRef = React.useRef(null)
