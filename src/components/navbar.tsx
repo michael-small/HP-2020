@@ -313,26 +313,13 @@ export default function Navbar(props: any) {
           </ListSubheader>
         }
       >
-        <ServiceMenuButton isMobile={true} />
-
-        <PageLink to={MOCK_PAGE_LINKS.media}>
-          <ListItem button>
-            <ListItemText primary="Media" />
-          </ListItem>
-        </PageLink>
-
-        <CompanyMenuButton isMobile={true} />
-        <PageLink to={MOCK_PAGE_LINKS.career}>
-          <ListItem button>
-            <ListItemText primary="Career" />
-          </ListItem>
-        </PageLink>
-
-        <PageLink to={MOCK_PAGE_LINKS.contact}>
-          <ListItem button>
-            <ListItemText primary="Contact" />
-          </ListItem>
-        </PageLink>
+        {MOCK_PAGE_LINKS_ARRAY.map((item, index) =>
+          <PageLink to={item.link} key={index}>
+            <ListItem button>
+              <ListItemText primary={item.label} />
+            </ListItem>
+          </PageLink>
+        )}
 
         <PageLink to={MOCK_PAGE_LINKS.lang}>
           <ListItem button>
@@ -391,24 +378,18 @@ export default function Navbar(props: any) {
             </PageLink>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <ServiceMenuButton isMobile={false} />
-              <PageLink to={MOCK_PAGE_LINKS.media}>
-                <Button color="inherit">Media</Button>
+            {/* <ServiceMenuButton isMobile={false} /> */}
+            {MOCK_PAGE_LINKS_ARRAY.map((item,index) =>
+              <PageLink to={item.link} key={index}>
+                <Button color="inherit">{item.label}</Button>
               </PageLink>
-
-              <CompanyMenuButton isMobile={false} />
-              <PageLink to={MOCK_PAGE_LINKS.career}>
-                <Button color="inherit">Career</Button>
-              </PageLink>
-              <PageLink to={MOCK_PAGE_LINKS.contact}>
-                <Button color="inherit">Contact</Button>
-              </PageLink>
-              <PageLink to={MOCK_PAGE_LINKS.lang}>
-                <Button color="inherit">
-                  <LanguageIcon />
-                  <Typography>English</Typography>
-                </Button>
-              </PageLink>
+            )}
+            <PageLink to={MOCK_PAGE_LINKS.lang}>
+              <Button color="inherit">
+                <LanguageIcon />
+                <Typography>English</Typography>
+              </Button>
+            </PageLink>
             </div>
             <div className={classes.sectionMobile}>
               <IconButton
