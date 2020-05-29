@@ -12,6 +12,7 @@ export default () => (
         backgroundPosition: "bottom left",
         backgroundSize: "cover",
       }}
+      loading="eager"
     >
       <HeaderBackgroundFilter>
         <HeaderContainer>

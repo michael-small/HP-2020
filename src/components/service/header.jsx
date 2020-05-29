@@ -11,6 +11,7 @@ export default () => (
       backgroundPosition: "bottom right",
       backgroundSize: "auto 100%",
     }}
+    loading="eager"
   >
     <HeaderContainer>
       <HeaderContent>
