@@ -2,16 +2,24 @@ import React from "react"
 import styled from "styled-components"
 import NavBar from "../navbar"
 import Container from "../container"
-import HeaderVideo from "../../images/index/video_light.mp4"
-import HeaderImage from "../../images/video2.png"
+import HeaderVideo from "../../images/index/video_640.mp4"
+// import HeaderImage from "../../images/video2.png"
 import { withTheme } from "@material-ui/core"
-// import Image from "../image"
+import Image from "../image"
 
 export default () => {
   return (
     <Wrapper>
-      <HeaderBackground muted autoPlay loop poster={HeaderImage}>
+      <HeaderBackground muted autoPlay loop>
         <source src={HeaderVideo} type="video/mp4" />
+        <Image
+          filename={"video2.png"}
+          objectFit="cover"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
       </HeaderBackground>
       <HeaderBackgroundFilter>
         <NavBar isTopPage />
@@ -76,8 +84,6 @@ const HeaderBackground = styled.video`
   overflow: hidden;
   top: 0px;
   right: 0px;
-  filter: grayscale(100%);
-  transform: scale(-1, 1);
   width: auto;
   height: auto;
   min-width: 100%;
