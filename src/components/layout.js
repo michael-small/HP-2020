@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
         style={{
           width: "100%",
           padding: `0px`,
+          overflow: "hidden",
         }}
       >
         <main>{children}</main>
