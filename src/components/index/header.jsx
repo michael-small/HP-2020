@@ -10,7 +10,7 @@ import Image from "../image"
 export default () => {
   return (
     <Wrapper>
-      <HeaderBackground muted autoPlay loop playsinline>
+      <HeaderBackground muted autoPlay loop playsInline>
         <source src={HeaderVideo} type="video/mp4" />
       </HeaderBackground>
       <HeaderBackgroundFilter>
