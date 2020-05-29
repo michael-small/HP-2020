@@ -11,7 +11,7 @@ export default () => {
   return (
     <Wrapper>
       <HeaderBackground muted autoPlay loop playsinline>
-        <source src={HeaderVideo} type="video/mp4"/>
+        <source src={HeaderVideo} type="video/mp4" />
       </HeaderBackground>
       <HeaderBackgroundFilter>
         <NavBar isTopPage />
