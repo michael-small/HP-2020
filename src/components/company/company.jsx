@@ -83,12 +83,15 @@ const Table = withTheme(styled.table`
   }
 `)
 
-const Attr = styled.td`
+const Attr = withTheme(styled.td`
   padding-left: 1.5em;
   max-width: 30%;
   color: #1a1a1a;
   width: 172px;
-`
+  ${props => props.theme.breakpoints.down("xs")} {
+    max-width: none;
+  }
+`)
 
 const Val = styled.td`
   text-align: left;
