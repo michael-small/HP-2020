@@ -13,7 +13,7 @@ import { createGlobalStyle } from "styled-components"
 
 // import Header from "./header"
 import "../fonts/fonts.css"
-// import "./layout.css"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -28,13 +28,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div
         style={{
           width: "100%",
           padding: `0px`,
-          overflow: "hidden",
+          overflowX: "hidden",
         }}
       >
         <main>{children}</main>
