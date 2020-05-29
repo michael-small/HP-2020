@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     "& h4": {
-      font: "18px/28px Noto Sans JP Bold",
+      font: "15px/28px Noto Sans JP Bold",
     },
     "& p": {
       marginTop: "11px",
