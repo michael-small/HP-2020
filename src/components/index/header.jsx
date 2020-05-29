@@ -4,27 +4,27 @@ import NavBar from "../navbar"
 import Container from "../container"
 import HeaderVideo from "../../images/index/video_480.mp4"
 import { isMobile } from "react-device-detect"
-import useComponentSize from '@rehooks/component-size'
+import useComponentSize from "@rehooks/component-size"
 // import HeaderImage from "../../images/video2.png"
 import { withTheme } from "@material-ui/core"
-import Background from "../background"
-
-console.log(isMobile)
+import Image from "../image"
 
 export default () => {
   const headerHeightRef = React.useRef(null)
   let size = useComponentSize(headerHeightRef)
 
   return (
-    <Wrapper height={size.height}>
+    <HeaderWrapper height={size.height}>
       {isMobile ? (
-        <Background
+        <Image
           filename="video2.png"
           style={{
-            backgroundPosition: "top right",
-            backgroundSize: "cover",
+            width: "100%",
             height: "100%",
+            right: "0px",
           }}
+          objectFit="cover"
+          objectPosition="top right"
           loading="eager"
         />
       ) : (
@@ -36,56 +36,24 @@ export default () => {
         <div ref={headerHeightRef}>
           <NavBar isTopPage />
           <HeaderContainer>
-            <Title>Web3.0を実現する。</Title>
-            <Desctiption>
+            <h1>Web3.0を実現する。</h1>
+            <p>
               Stake
               Technologiesは、ブロックチェーン技術の利用を中心として、次世代のWebであるWeb3.0の実現を推進していきます。
               誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。
-            </Desctiption>
+            </p>
           </HeaderContainer>
         </div>
       </HeaderBackgroundFilter>
-    </Wrapper>
+    </HeaderWrapper>
   )
 }
 
-const Title = withTheme(
-  styled.h1`
-  display: block;
-  margin-top: 27vh;
-  font: 70px/103px Noto Sans JP Light;
-  ${props => props.theme.breakpoints.down("sm")} {
-    font-size: 56px;
-    line-height: 70px;
-  }
-  ${props => props.theme.breakpoints.down("xs")} {
-    font-size: 32px;
-    line-height: 47px;
-    text-align: center;
-    margin-left: 0.5em;
-  }
-`)
-
-
-const Desctiption = withTheme(
-  styled.div`
-  max-width: 620px;
-  margin-top: 26px;
-  padding: 0px;
-  font: 16px/30px Noto Sans JP Regular;
-  ${props => props.theme.breakpoints.down("xs")} {
-    font-size: 15px;
-    line-height: 30px;
-    text-align: center;
-  }
-`
-)
-
-const Wrapper = styled.div`
+const HeaderWrapper = styled.div`
   position: relative;
   background-color: rgba(0, 0, 0);
   width: 100%;
-  height: ${props => (props.height ? props.height+"px" : "100vh")};
+  height: ${props => (props.height ? props.height + "px" : "100vh")};
   min-height: 100vh;
   overflow: hidden;
 `
@@ -113,7 +81,36 @@ const HeaderBackgroundFilter = styled.div`
   height: 100%;
 `
 
-const HeaderContainer = styled(Container)`
+const HeaderContainer = withTheme(styled(Container)`
+  h1 {
+    display: block;
+    margin-top: 27vh;
+    font: 70px/103px Noto Sans JP Light;
+  }
+  p {
+    max-width: 620px;
+    margin-top: 26px;
+    font: 16px/30px Noto Sans JP Regular;
+  }
+  ${props => props.theme.breakpoints.down("sm")} {
+    h1 {
+      font-size: 56px;
+      line-height: 70px;
+    }
+  }
+  ${props => props.theme.breakpoints.down("xs")} {
+    h1 {
+      font-size: 32px;
+      line-height: 47px;
+      text-align: center;
+      margin-left: 0.5em;
+    }
+    p {
+      font-size: 15px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -121,4 +118,4 @@ const HeaderContainer = styled(Container)`
   padding-bottom: 100px;
   letter-spacing: 0px;
   text-align: left;
-`
+`)
