@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "Noto Sans JP";
     font-weight: 300;
     src: local("Noto Sans JP Light"),
@@ -41,15 +41,7 @@
         url("nsjpb.woff2") format("woff2"),
         url("nsjpb.woff2") format("woff");
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Noto Sans JP Bold";
-    src: local("Noto Sans JP Bold"),
-        url("nsjpb.woff") format("woff2"),
-        url("nsjpb.woff") format("woff");
-    font-display: swap;
-}
+}*/
 
 @font-face {
     font-family: "Orbitron";
