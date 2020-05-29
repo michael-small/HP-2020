@@ -2,7 +2,7 @@ module.exports = {
   // pathPrefix: "/HP-2020",
   siteMetadata: {
     title: `Stake Technologies`,
-    description: ``,
+    description: `Stake Technologiesは、ブロックチェーン技術の利用を中心として、次世代のWebであるWeb3.0の実現を推進していきます。 誰もが意識することなく、テクノロジーの利便性を公平に享受できるようにすることが私たちの使命です。`,
     siteUrl: "https://stake.co.jp/",
     author: `Task Ohmori`,
   },
