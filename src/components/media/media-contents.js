@@ -139,7 +139,7 @@ const ButtonRect = styled(_ButtonRect)`
 `
 
 const ButtonLabel = styled(_ButtonLabel)`
-  font: 15px/12px Noto Sans JP Regular;
+  font: 15px/12px Noto Sans JP;
 `
 export const LoadLeftIcon = styled(LoadIcon).attrs({
   height: "1em",

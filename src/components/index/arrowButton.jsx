@@ -17,10 +17,8 @@ const ButtonRect = styled.div`
   color: ${props => props.color || "#1A1A1A"};
   opacity: 0.7;
   font: ${props =>
-    props.lang === "en"
-      ? "16px/12px TT Commons"
-      : "15px/12px Noto Sans JP Regular"};
-  font-weight: ${props => (props.lang === "en" ? 500 : "Regular")};
+    props.lang === "en" ? "16px/12px TT Commons" : "15px/12px Noto Sans JP"};
+  font-weight: 500;
   text-align: center;
 `
 

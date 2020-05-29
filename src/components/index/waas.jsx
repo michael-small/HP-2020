@@ -15,13 +15,16 @@ export default () => {
   const downXs = useMediaQuery(theme.breakpoints.down("xs"))
 
   return (
-    <WaasBg
-      filename="service-bg.png"
-      style={{
-        backgroundSize: "1535px 959px",
-        backgroundPosition: "top left 0px",
-      }}
-    >
+    <WaasWrapper>
+      <WaasBg
+        filename="service-bg.png"
+        style={{
+          position: "absolute",
+          width: "1535px",
+          height: "959px",
+          objectPosition: "top left",
+        }}
+      />
       <WaasContainer>
         <h1>Web3.0 as a Service</h1>
         <ProductCards style={{ marginTop: downXs ? "51px" : "62px" }} />
@@ -64,7 +67,7 @@ export default () => {
           </ItemDescription>
         </FlexContainer>
       </WaasContainer>
-    </WaasBg>
+    </WaasWrapper>
   )
 }
 
@@ -100,34 +103,36 @@ const ArrowButton = ({ style, to, ...props }) => {
 }
 
 const WaasContainer = withTheme(
-  styled(Container)(
-    props => `
-  padding-top: 120px;
-  padding-bottom: 76px;
-  letter-spacing: 0px;
-  color: #ffffff;
-  width: 100%;
-  h1 {
-    text-align: center;
-    margin: 0px auto 0px;
-    font: Bold 50px/67px TT Commons;
-  }
-  ${props.theme.breakpoints.down("xs")} {
-    padding-top: 75px;
-    padding-bottom: 120px;
+  styled(Container)`
+    position: relative;
+    z-index: 10;
+    padding-top: 120px;
+    padding-bottom: 76px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    width: 100%;
     h1 {
-      font-size: 34px;
-      line-height: 46px;
+      text-align: center;
+      margin: 0px auto 0px;
+      font: Bold 50px/67px TT Commons;
     }
-  }
-`
-  )
+    ${props => props.theme.breakpoints.down("xs")} {
+      padding-top: 75px;
+      padding-bottom: 120px;
+      h1 {
+        font-size: 34px;
+        line-height: 46px;
+      }
+    }
+  `
 )
 
+const WaasWrapper = styled.div`
+  background-color: #000000;
+`
+
 const WaasBg = styled(Background)`
-  && {
-    background-color: #000000;
-  }
+  background-color: #000000;
 `
 
 const FlexContainer = withTheme(
@@ -182,12 +187,12 @@ const ItemDescription = withTheme(
     margin: 0px;
     padding: 0px;
     font-weight: normal;
-    font: 22px/30px Noto Sans JP Bold;
+    font: 700 22px/30px Noto Sans JP;
   }
   p {
     text-align: left;
     margin-top: 25px;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
     color: #B2B2B2;
   }
   ${props.theme.breakpoints.down("xs")} {

@@ -14,24 +14,24 @@ const theme = css`
     display: inline;
     text-align: center;
     margin: 0px auto 0px;
-    font: 30px/45px Noto Sans JP Bold;
+    font: 700 30px/45px Noto Sans JP;
   }
   & h3 {
     display: inline-block;
     text-align: center;
     margin: 59px auto 0px;
-    font: 30px/45px Noto Sans JP Bold;
+    font: 700 30px/45px Noto Sans JP;
   }
   & h4 {
     text-align: center;
     margin: 0px;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   & p {
     text-align: left;
     margin: 27px 0px 0px;
     color: #7b7b7b;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   ${props => props.theme.breakpoints.down("xs")} {
     & h1 {

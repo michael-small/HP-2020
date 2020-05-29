@@ -63,12 +63,12 @@ const HeaderContent = withTheme(
     margin-top: 25vh;
     margin-left: 0.2em;
     color: #FFFFFF;
-    font: 60px/81px TT Commons Light;
+    font: 300 60px/81px TT Commons;
   }
   & p {
     margin-top: 35px;
     color: #FFFFFF;
-    font: 18px/30px Noto Sans JP Regular;
+    font: 18px/30px Noto Sans JP;
   }
   ${props.theme.breakpoints.down("xs")} {
     margin-top: 84px ;

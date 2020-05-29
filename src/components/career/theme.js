@@ -15,7 +15,7 @@ const theme = css`
     text-align: left;
     margin: 25px 0px 0px;
     color: #7b7b7b;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   ${props => props.theme.breakpoints.down("xs")} {
     padding-bottom: 100px;

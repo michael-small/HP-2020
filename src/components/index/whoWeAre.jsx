@@ -52,7 +52,7 @@ const WhoDescription = withTheme(
   margin-top: 28px;
   color: #7b7b7b;
   text-align: center;
-  font: 16px/30px Noto Sans JP Regular;
+  font: 16px/30px Noto Sans JP;
   opacity: 1;
   ${theme.breakpoints.down("xs")} {
     font-size: 15px;

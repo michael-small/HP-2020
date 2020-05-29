@@ -45,7 +45,7 @@ const HeaderBackground = styled(Image).attrs(props => ({
 
 const HeaderContainer = styled(Container)`
   position: relative;
-  z-index: 2;
+  z-index: 10;
   overflow: hidden;
 `
 
@@ -58,12 +58,12 @@ const HeaderContent = withTheme(styled.div`
   letter-spacing: 0px;
   & h1 {
     color: #ffffff;
-    font: 60px/81px TT Commons Light;
+    font: 300 60px/81px TT Commons;
   }
   & p {
     margin-top: 29px;
     color: #cccccc;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   ${props => props.theme.breakpoints.down("xs")} {
     margin-top: 124px;

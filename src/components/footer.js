@@ -149,7 +149,7 @@ const FooterItem = withTheme(
     & ul {
       padding-top: 20px;
       list-style: none;
-      font: 14px/30px Noto Sans JP Regular;
+      font: 14px/30px Noto Sans JP;
       text-align: left;
     }
   `
@@ -170,7 +170,7 @@ const Copywrite = styled.span`
 const PrivacyPolicy = styled(Link)`
   && {
     margin-left: 20px;
-    font: 13px/17px Noto Sans JP Regular;
+    font: 13px/17px Noto Sans JP;
     opacity: 1;
   }
 `

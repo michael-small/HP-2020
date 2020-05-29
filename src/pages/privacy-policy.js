@@ -35,7 +35,7 @@ const Container = styled.div`
   }
   h2 {
     text-align: left;
-    font: 16px/30px Noto Sans JP Bold;
+    font: 700 16px/30px Noto Sans JP;
     letter-spacing: 0px;
     color: #1a1a1a;
     opacity: 1;
@@ -43,7 +43,7 @@ const Container = styled.div`
   }
   p {
     text-align: left;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
     letter-spacing: 0px;
     color: #7b7b7b;
     opacity: 1;

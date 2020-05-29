@@ -45,7 +45,7 @@ const Container = withTheme(styled(_Container)`
   padding-bottom: 129px;
   // overflow: hidden;
   * {
-    z-index: 2;
+    z-index: 10;
   }
   & p {
     max-width: 630px;
@@ -60,7 +60,6 @@ const Image = withTheme(styled(_Image)`
   bottom: 0px;
   right: 0px;
   opacity: 0.4;
-  z-index: 1;
   ${props => props.theme.breakpoints.down("sm")} {
     opacity: 0.2;
   }

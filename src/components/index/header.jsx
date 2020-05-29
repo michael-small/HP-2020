@@ -84,12 +84,12 @@ const HeaderContainer = withTheme(styled(Container)`
   h1 {
     display: block;
     margin-top: 27vh;
-    font: 70px/103px Noto Sans JP Light;
+    font: 300 70px/103px Noto Sans JP;
   }
   p {
     max-width: 620px;
     margin-top: 26px;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   ${props => props.theme.breakpoints.down("sm")} {
     h1 {

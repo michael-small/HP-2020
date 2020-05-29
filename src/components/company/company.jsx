@@ -52,7 +52,7 @@ const Container = withTheme(styled(_Container)`
 
 const Table = withTheme(styled.table`
   margin: 26px auto 67.5px;
-  font: 16px/30px Noto Sans JP Regular;
+  font: 16px/30px Noto Sans JP;
   text-align: left;
   letter-spacing: 0px;
   width: 100%;

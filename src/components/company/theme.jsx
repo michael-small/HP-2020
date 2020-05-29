@@ -16,12 +16,12 @@ const theme = css`
   }
   & h3 {
     margin: 59px auto 0px;
-    font: 35px/52px Noto Sans JP Bold;
+    font: 700 35px/52px Noto Sans JP;
   }
   & p {
     margin: 38px auto 0px 0px;
     color: #7b7b7b;
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
   }
   ${props => props.theme.breakpoints.down("xs")} {
     & h1 {

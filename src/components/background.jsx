@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image/withIEPolyfill"
 
 export default ({ filename, className, ...props }) => (
   <StaticQuery
@@ -36,9 +36,9 @@ export default ({ filename, className, ...props }) => (
       const imageFluid = image.node.childImageSharp.fluid
 
       return (
-        <BackgroundImage fluid={imageFluid} className={className} {...props}>
+        <Img fluid={imageFluid} className={className} {...props}>
           {props.children}
-        </BackgroundImage>
+        </Img>
       )
     }}
   />

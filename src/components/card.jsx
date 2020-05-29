@@ -36,8 +36,8 @@ const CardContent = styled.div`
   padding-left: 23px;
   padding-right: 23px;
   text-align: center;
-  font-weight: Regular;
-  font: 14px/24px Noto Sans JP Regular;
+  font-weight: 500;
+  font: 14px/24px Noto Sans JP;
   letter-spacing: 0px;
   color: #7b7b7b;
   opacity: 1;

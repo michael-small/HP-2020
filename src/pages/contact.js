@@ -72,7 +72,7 @@ const Container = withTheme(styled(_Container)`
   max-width: 600px;
   & input,
   textarea {
-    font: 16px/30px Noto Sans JP Regular;
+    font: 16px/30px Noto Sans JP;
     padding-left: 1em;
     width: 100%;
     height: 50px;

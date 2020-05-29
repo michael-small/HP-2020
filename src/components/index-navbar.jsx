@@ -53,7 +53,7 @@ const NavLabel = ({ children, ...props }) => {
     margin: 0px 0px 0px -2px;
     height: 40px;
     text-align: center;
-    font: 16px/16px Noto Sans JP Regular;
+    font: 16px/16px Noto Sans JP;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 50px;
@@ -74,7 +74,7 @@ const NavLabel = ({ children, ...props }) => {
 //   margin: auto 0;
 //   height: 40px;
 //   text-align: center;
-//   font: 16px/16px Noto Sans JP Regular;
+//   font: 16px/16px Noto Sans JP;
 //   padding-left: 50px;
 //   padding-right: 50px;
 // `

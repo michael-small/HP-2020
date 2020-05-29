@@ -59,7 +59,7 @@ const FlexConteiner = styled.div`
     display: block;
     text-align: center;
     margin: 0px -50% 0px;
-    font: 16px/23px Noto Sans JP Regular;
+    font: 16px/23px Noto Sans JP;
     color: #7b7b7b;
   }
 `

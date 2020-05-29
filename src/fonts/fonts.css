@@ -1,5 +1,6 @@
 @font-face {
-    font-family: "Noto Sans JP Light";
+    font-family: "Noto Sans JP";
+    font-weight: 300;
     src: local("Noto Sans JP Light"),
         url("nsjpl.woff2") format("woff2"),
         url("nsjpl.woff") format("woff");
@@ -7,10 +8,38 @@
 }
 
 @font-face {
-    font-family: "Noto Sans JP Regular";
+    font-family: "Noto Sans JP";
+    font-weight: 400;
     src: local("Noto Sans JP Regular"),
         url("nsjpr.woff2") format("woff2"),
         url("nsjpr.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    src: local("Noto Sans JP Medium"),
+        url("nsjpm.woff2") format("woff2"),
+        url("nsjpm.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-weight: 700;
+    src: local("Noto Sans JP Bold"),
+        url("nsjpb.woff2") format("woff2"),
+        url("nsjpb.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans JP";
+    font-weight: 700;
+    src: local("Noto Sans JP Bold"),
+        url("nsjpb.woff2") format("woff2"),
+        url("nsjpb.woff2") format("woff");
     font-display: swap;
 }
 
@@ -51,16 +80,17 @@
 
 @font-face {
     font-family: "TT Commons";
+    font-weight: 500;
     src: local("TT Commons"),
         url("TTCommons-Medium.woff2") format("woff2"),
         url("TTCommons-Medium.woff") format("woff");
-    font-weight: 500;
     font-display: swap;
 
 }
 
 @font-face {
-    font-family: "TT Commons Light";
+    font-family: "TT Commons";
+    font-weight: 300;
     src: local("TT Commons Light"),
         url("TTCommons-Light.woff2") format("woff2"),
         url("TTCommons-Light.woff") format("woff");

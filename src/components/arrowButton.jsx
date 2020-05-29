@@ -46,7 +46,7 @@ export const ButtonRect = styled.div(
   color: ${props.color || "#FFFFFF"};
   opacity: 1;
   font-weight: ${props.lang === "en" ? 500 : "Normal"};
-  font-family: ${props.lang === "en" ? "TT Commons" : "Noto Sans JP Regular"};
+  font-family: ${props.lang === "en" ? "TT Commons" : "Noto Sans JP"};
   font-size: ${props.lang === "en" ? "1.6rem" : "2.2rem"};
 `
 )
