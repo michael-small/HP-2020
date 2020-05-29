@@ -129,6 +129,7 @@ const WaasContainer = withTheme(
 
 const WaasWrapper = styled.div`
   background-color: #000000;
+  overflow: hidden;
 `
 
 const WaasBg = styled(Background)`
