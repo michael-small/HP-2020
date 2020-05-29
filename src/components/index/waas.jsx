@@ -128,8 +128,9 @@ const WaasContainer = withTheme(
 )
 
 const WaasWrapper = styled.div`
-  background-color: #000000;
+  position: relative;
   overflow: hidden;
+  background-color: #000000;
 `
 
 const WaasBg = styled(Background)`
@@ -139,7 +140,6 @@ const WaasBg = styled(Background)`
 const FlexContainer = withTheme(
   styled.div(
     props => `
-  width: 100%;
   display: flex;
   min-height: 100px;
   justify-content: space-between;
