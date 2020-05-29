@@ -30,10 +30,6 @@ const Company = ({ ...props }) => {
           <Attr>代表取締役</Attr>
           <Val>渡辺創太</Val>
         </tr>
-        <tr>
-          <Attr>Eメール</Attr>
-          <Val>info@stake.co.jp</Val>
-        </tr>
       </Table>
       <ArrowButton
         css="margin: 0 auto 0;"
