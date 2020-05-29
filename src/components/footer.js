@@ -133,7 +133,7 @@ const FooterFlexContainer = styled(Box).attrs(props => ({
 
 const FooterItem = withTheme(
   styled(Box).attrs({
-    item: true,
+    item: "true",
   })(
     ({ theme }) => `
     padding: ${theme.spacing(3)}px;
