@@ -33,6 +33,25 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import CloseIcon from "@material-ui/icons/Close"
 
 // add the page links in here, I know it's a very hacky way to do this
+const MOCK_PAGE_LINKS_ARRAY = [
+  {
+    label:"Service",
+    link: "/service",
+  },{
+    label:"Media",
+    link: "/media",
+  },{
+    label:"Company",
+    link: "/company",
+  },{
+    label:"Career",
+    link: "/career",
+  },{
+    label:"Contact",
+    link: "/contact",
+  }
+]
+
 const MOCK_PAGE_LINKS = {
   products: "/service#products",
   development: "/service#development",

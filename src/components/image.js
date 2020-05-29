@@ -17,7 +17,7 @@ export default ({ filename, className, ...props }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 1600) {
                   ...GatsbyImageSharpFluid
                 }
               }
