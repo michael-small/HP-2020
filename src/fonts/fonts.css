@@ -94,4 +94,5 @@
     src: local("TT Commons Light"),
         url("TTCommons-Light.woff2") format("woff2"),
         url("TTCommons-Light.woff") format("woff");
+    font-display: swap;
 }
