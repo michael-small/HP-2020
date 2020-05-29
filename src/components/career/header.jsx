@@ -1,47 +1,42 @@
 import React from "react"
 import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
-import Background from "../background"
+import Image from "../image"
 import Container from "../container"
 
 export default () => (
-  <Wrapper>
-    <HeaderBackground
-      filename="career/career_header.jpg"
-      style={{
-        backgroundPosition: "bottom left",
-        backgroundSize: "cover",
-      }}
-      loading="eager"
-    >
-      <HeaderBackgroundFilter>
-        <HeaderContainer>
-          <HeaderContent>
-            <h1>Join Our Team</h1>
-            <p>
-              私たちはブロックチェーンを活用し次世代のWebであるWeb3.0を実現するために、世界中から最高峰の人材を募集しています。未来に挑戦する新たな仲間のエントリーをお待ちしております。
-            </p>
-          </HeaderContent>
-        </HeaderContainer>
-      </HeaderBackgroundFilter>
-    </HeaderBackground>
-  </Wrapper>
+  <HeaderWrapper>
+    <HeaderBackground filename="career/career_header.jpg" />
+    <HeaderBackgroundFilter>
+      <HeaderContainer>
+        <HeaderContent>
+          <h1>Join Our Team</h1>
+          <p>
+            私たちはブロックチェーンを活用し次世代のWebであるWeb3.0を実現するために、世界中から最高峰の人材を募集しています。未来に挑戦する新たな仲間のエントリーをお待ちしております。
+          </p>
+        </HeaderContent>
+      </HeaderContainer>
+    </HeaderBackgroundFilter>
+  </HeaderWrapper>
 )
 
-const Wrapper = styled.div`
+const HeaderWrapper = styled.div`
   position: relative;
   background-color: rgba(0, 0, 0);
   width: 100%;
+  height: 100vh;
   min-height: 100vh;
   overflow: hidden;
 `
 
-const HeaderBackground = styled(Background)`
-  && {
-    min-height: 100vh;
-    background-color: #1a1a1a;
-  }
-`
+const HeaderBackground = styled(Image).attrs(props => ({
+  objectFit: "cover",
+  loading: "eager",
+  ...props,
+}))({
+  width: "100%",
+  height: "100%",
+})
 
 const HeaderBackgroundFilter = styled.div`
   position: absolute;

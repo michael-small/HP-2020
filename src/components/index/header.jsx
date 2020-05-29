@@ -21,7 +21,6 @@ export default () => {
           style={{
             width: "100%",
             height: "100%",
-            right: "0px",
           }}
           objectFit="cover"
           objectPosition="top right"

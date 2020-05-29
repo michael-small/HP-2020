@@ -1,18 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
-import Background from "../background"
+import Image from "../image"
 import Container from "../container"
 
 export default () => (
-  <HeaderBackground
-    filename="company/header.jpg"
-    style={{
-      backgroundPosition: "top right",
-      backgroundSize: "cover",
-    }}
-    loading="eager"
-  >
+  <HeaderWrapper>
+    <HeaderBackground
+      filename="company/header.jpg"
+      style={{ position: "absolute" }}
+    />
     <HeaderContainer>
       <HeaderContent>
         <h1>Who We Are</h1>
@@ -23,17 +20,32 @@ export default () => (
         </p>
       </HeaderContent>
     </HeaderContainer>
-  </HeaderBackground>
+  </HeaderWrapper>
 )
 
-const HeaderBackground = styled(Background)`
-  && {
-    min-height: 100vh;
-    background-color: #ffffff;
-  }
+const HeaderWrapper = styled.div`
+  position: relative;
+  background-color: rgba(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 `
 
+const HeaderBackground = styled(Image).attrs(props => ({
+  objectFit: "cover",
+  loading: "eager",
+  ...props,
+}))({
+  width: "100%",
+  height: "100%",
+  backgroundPosition: "top right",
+  backgroundSize: "cover",
+})
+
 const HeaderContainer = styled(Container)`
+  position: relative;
+  z-index: 2;
   overflow: hidden;
 `
 
