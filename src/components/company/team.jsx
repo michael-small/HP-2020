@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "../image"
 import styled from "styled-components"
-import { withTheme, Dialog as MuiDialog, DialogContent as MuiDialogContent, withStyles } from "@material-ui/core"
+import { withTheme, Dialog as MuiDialog, DialogContent as MuiDialogContent, withStyles, useMediaQuery, useTheme } from "@material-ui/core"
 import IconButton from "@material-ui/core/IconButton"
 import CloseIcon from "@material-ui/icons/Close"
 import localTheme from "./theme"
@@ -96,6 +96,8 @@ export default ({ ...props }) => {
 }
 
 const IntroductionDialog = React.forwardRef(({item, ...props}, ref) => {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const [open,setOpen] = React.useState(false)
   const handleClickOpen = ()=> {setOpen(true)}
   const handleClose = ()=> {setOpen(false)}
@@ -107,7 +109,7 @@ const IntroductionDialog = React.forwardRef(({item, ...props}, ref) => {
     };
   });
 
-  return <Dialog onClose={handleClose} open={open}>
+  return <Dialog onClose={handleClose} open={open} fullScreen={fullScreen}>
       <IconButton style={{margin:"0px 0px 0px auto"}} onClick={handleClose}>
         <CloseIcon  style={{color:"white"}}/>
       </IconButton>
@@ -166,11 +168,6 @@ const Job = styled.span`
 const Dialog = withStyles((theme)=>({
   paper: {
     backgroundColor: "#1A1A1A",
-    [theme.breakpoints.down("xs")] : {
-      margin: "0px",
-      width: "100%",
-      height: "100%",
-    },
   }
 }))(MuiDialog)
 
