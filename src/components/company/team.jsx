@@ -5,76 +5,73 @@ import { withTheme } from "@material-ui/core"
 import localTheme from "./theme"
 import _Container from "../container"
 
+const Introductions = [
+  {
+    filename:"1_-Sota-Watanabe_CEO.jpg",
+    name:"Sota Watanabe",
+    job:"CEO",
+    description:"",
+  },
+  {
+    filename:"2_Takumi-Yamashita_CTO.jpg",
+    name:"Takumi Yamashita",
+    job:"CTO",
+    description:"",
+  },
+  {
+    filename:"3_Masaharu-Uno_COO.jpg",
+    name:"Masaharu Uno",
+    job:"COO",
+    description:"",
+  },
+  {
+    filename:"4_Task-Ohmori_Core-Developer.jpg",
+    name:"Task Ohmori",
+    job:"Core Developer",
+    description:"",
+  },
+  {
+    filename:"5_-Alexandr-Krupenkin.png",
+    name:"Alexandr Krupenkin",
+    job:"Software Engineer",
+    description:"",
+  },
+  {
+    filename:"6_-Yoshinobu-Shijo.png",
+    name:"Yoshinobu Shijo",
+    job:"Product Manager",
+    description:"",
+  },
+  {
+    filename:"7_Hoon-Kim_Software-Engineer.jpg",
+    name:"Hoon Kim",
+    job:"Software Engineer",
+    description:"",
+  },
+  {
+    filename:"8_-Tomomasa-Matsunaga.png",
+    name:"Tomomoasa Matsunaga",
+    job:"Software Engineer",
+    description:"",
+  }
+]
+
 export default ({ ...props }) => {
   return (
     <Bg>
       <Container {...props}>
         <h1>Teams</h1>
         <FlexConteiner>
-          <FlexItem>
-            <Image
-              filename="1_-Sota-Watanabe_CEO.jpg"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Sota Watanabe</Name>
-            <Job>CEO</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="2_Takumi-Yamashita_CTO.jpg"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Takumi Yamashita</Name>
-            <Job>CTO</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="3_Masaharu-Uno_COO.jpg"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Masaharu Uno</Name>
-            <Job>COO</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="4_Task-Ohmori_Core-Developer.jpg"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Task Ohmori</Name>
-            <Job>Core Developer</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="5_-Alexandr-Krupenkin.png"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Alexsandr Krupenkin</Name>
-            <Job>Software Engineer</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="6_-Yoshinobu-Shijo.png"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Yoshinobu Shijo</Name>
-            <Job>Product Manager</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="7_Hoon-Kim_Software-Engineer.jpg"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Hoon Kim</Name>
-            <Job>Software Engineer</Job>
-          </FlexItem>
-          <FlexItem>
-            <Image
-              filename="8_-Tomomasa-Matsunaga.png"
-              style={{ width: 204, height: 204 }}
-            />
-            <Name>Tomomasa Matsunaga</Name>
-            <Job>Software Engineer</Job>
-          </FlexItem>
+          {Introductions.map((item,index)=>{
+            return <FlexItem key={index}>
+              <Image
+                filename={item.filename}
+                style={{ width: 204, height: 204 }}
+              />
+              <Name>{item.name}</Name>
+              <Job>{item.job}</Job>
+            </FlexItem>
+          })}
         </FlexConteiner>
       </Container>
     </Bg>
