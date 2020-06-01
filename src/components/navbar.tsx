@@ -364,7 +364,7 @@ export default function Navbar(props: any) {
           href={SNS_LINKS.medium}
         >
           <IconButton style={{ color: "white" }}>
-            <MediumIcon width="75%" style={{fill:"currentcolor", }}/>
+            <MediumIcon width="0.75em" height="0.75em" viewBox="0 0 24 24" style={{fill:"currentcolor"}}/>
           </IconButton>
         </Link>
       </div>
