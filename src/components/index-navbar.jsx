@@ -34,7 +34,7 @@ export default ({ labels, ...props }) => {
 }
 
 const Wrapper = styled(Container)`
-   {
+   && {
     width: 100%;
     padding-top: 46px;
     padding-bottom: 44px;
