@@ -7,11 +7,26 @@
 
 import React from "react"
 import styled from "styled-components"
-import { Box, withTheme } from "@material-ui/core"
+import { Box, withTheme, Link as ExternalLink, useTheme, useMediaQuery } from "@material-ui/core"
 import Container from "./container"
 import { StyledLink as Link } from "./link"
+import MediumIcon from "../images/icons/medium-icon.inline.svg"
+import MuiIconButton from "@material-ui/core/IconButton"
+import GitHubIcon from "@material-ui/icons/GitHub"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+
+const SNS_LINKS = {
+  github: "https://github.com/staketechnologies",
+  twitter: "https://twitter.com/staketech",
+  linkedin: "https://www.linkedin.com/company/staked-technologies/",
+  medium: "https://medium.com/stake-technologies",
+}
 
 const Footer = () => {
+  const theme = useTheme()
+  const downXs = useMediaQuery(theme.breakpoints.down("xs"))
+
   return (
     <FooterBg>
       <FooterWrapperTop>
@@ -92,14 +107,55 @@ const Footer = () => {
       </FooterWrapperTop>
       <FooterHr />
       <FooterWrapperBottom>
-        <div style={{}}>
+        <div style={downXs?{margin: "0 auto 0"}:{}}>
+          <ExternalLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={SNS_LINKS.github}
+          >
+            <IconButton>
+              <GitHubIcon />
+            </IconButton>
+          </ExternalLink>
+          <ExternalLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={SNS_LINKS.twitter}
+          >
+            <IconButton>
+              <TwitterIcon />
+            </IconButton>
+          </ExternalLink>
+
+          <ExternalLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={SNS_LINKS.linkedin}
+          >
+            <IconButton>
+              <LinkedInIcon />
+            </IconButton>
+          </ExternalLink>
+          <ExternalLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={SNS_LINKS.medium}
+          >
+            <IconButton>
+              <MediumIcon
+                width="0.75em"
+                style={{ fill: "currentcolor" }}
+              />
+            </IconButton>
+          </ExternalLink>
+        </div>
+        <div style={downXs?{marginTop: "10px"}:{marginRight: "auto"}}>
           <Copywrite>
             {`© ${new Date().getFullYear()}, Stake Technologies — All Rights Reserved`}
           </Copywrite>
           <PrivacyPolicy to="/privacy-policy">
             プライバシーポリシー
           </PrivacyPolicy>
-          <div style={{ marginLeft: "auto" }}></div>
         </div>
       </FooterWrapperBottom>
     </FooterBg>
@@ -113,30 +169,43 @@ const FooterBg = styled.div`
   text-align: left;
 `
 
-const FooterWrapperTop = styled(Container)`
+const FooterWrapperTop = withTheme(styled(Container)`
   padding-top: 65px;
   padding-bottom: 120px;
-`
+  ${props=>props.theme.breakpoints.down("xs")} {
+    padding-bottom: 50px;
+  }
+`)
 
-const FooterWrapperBottom = styled(Container)`
+const FooterWrapperBottom = withTheme(styled(Container)`
   // height: 69px;
+  display: flex;
+  flex-direction: row-reverse;
   padding-top: 30px;
   padding-bottom: 24px;
-`
+  ${props => props.theme.breakpoints.down("xs")} {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+`)
 
-const FooterFlexContainer = styled(Box).attrs(props => ({
+const FooterFlexContainer = withTheme(styled(Box).attrs(props => ({
   display: "flex",
-  justifyContent: "center",
+  // justifyContent: "center",
   flexWrap: "wrap",
   ...props,
-}))``
+}))`
+  ${props => props.theme.breakpoints.down("xs")} {
+    flex-direction: column;
+  }
+`
+)
 
 const FooterItem = withTheme(
   styled(Box).attrs({
     item: "true",
-  })(
-    ({ theme }) => `
-    padding: ${theme.spacing(3)}px;
+  })`
+    padding: ${props=>props.theme.spacing(2)}px;
     letter-spacing: 0px;
     color: #ffffff;
     opacity: 1;
@@ -148,13 +217,24 @@ const FooterItem = withTheme(
     }
     & ul {
       padding-top: 20px;
+      padding-left: 1em;
       list-style: none;
       font: 14px/30px Noto Sans JP;
       text-align: left;
     }
+    ${props=>props.theme.breakpoints.down("xs")} {
+      & ul {
+        display: none;
+      }
+    }
   `
-  )
 )
+
+const IconButton = withTheme(styled(MuiIconButton)`
+  color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+`)
 
 const FooterHr = styled.hr`
   border: 1px solid #4e4e4e;
@@ -172,6 +252,7 @@ const PrivacyPolicy = styled(Link)`
     margin-left: 20px;
     font: 13px/17px Noto Sans JP;
     opacity: 1;
+    white-space: nowrap;
   }
 `
 
