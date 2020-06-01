@@ -10,7 +10,6 @@ import ArrowButton from "../components/arrowButton"
 
 const ContactPage = () => {
   const formRef = React.useRef(null)
-  console.log(formRef)
 
   return (
     <Layout>
