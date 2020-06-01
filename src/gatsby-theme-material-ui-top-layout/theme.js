@@ -17,6 +17,17 @@ theme = createMuiTheme({
         fontSize: "1.8rem",
       },
     },
+    MuiPaginationItem: {
+      page: {
+        "&.Mui-selected.MuiPaginationItem-root": {
+          "@media (hover: none)": {
+            "&:hover":{
+              backgroundColor: "rgba(0,0,0,0.12)"
+            }
+          }
+        }
+      }
+    },
     MuiTypography: {
       body1: {
         fontSize: "1.8rem",
@@ -40,5 +51,6 @@ theme = createMuiTheme({
     },
   },
 })
+console.log(theme)
 
 export default theme

@@ -48,13 +48,13 @@ export default () => {
         {query.allMediaOg.edges.map(edge => {
           const node = edge.node
           return (
-            <FlexItem>
+            <div>
               <MediaCard
                 node={node}
                 key={edge.node.id}
                 style={{ margin: downXs ? "0px auto 0px " : "0px 10px 0px" }}
               />
-            </FlexItem>
+            </div>
           )
         })}
       </CardView>
@@ -102,17 +102,13 @@ const CardView = ({ downXs, ...props }) => {
   }
 }
 
-const FlexItem = withTheme(styled.div`
-  ${props => props.theme.breakpoints.down("xs")} {
-    scroll-snap-align: start;
-    // min-width: 100%;
-  }
-`)
-
 const Pagination = withStyles(theme => ({
   ul: {
     justifyContent: "center",
   },
+  "@media (hover: none)" :{
+    backgroundColor: "blue"
+  }
 }))(MuiPagination)
 
 const FlexContainer = withTheme(styled.div`
@@ -122,7 +118,4 @@ flex: 0 0 auto;
 justify-content: left;
 overflow-x: scroll;
 flex-wrap: nowrap;
-// ${props => props.theme.breakpoints.down("xs")} {
-//   scroll-snap-type: x mandatory;
-// }
 `)
