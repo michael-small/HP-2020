@@ -217,7 +217,6 @@ const FooterItem = withTheme(
     }
     & ul {
       padding-top: 20px;
-      padding-left: 1em;
       list-style: none;
       font: 14px/30px Noto Sans JP;
       text-align: left;
