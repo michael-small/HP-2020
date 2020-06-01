@@ -1,12 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery } from "gatsby"
-import { withTheme, useTheme, useMediaQuery } from "@material-ui/core"
+import {
+  withTheme,
+  useTheme,
+  useMediaQuery,
+  withStyles,
+} from "@material-ui/core"
+import MuiPagination from "@material-ui/lab/Pagination"
 import ArrowButton from "./arrowButton"
 import MediaCard from "../media/media-card"
 import _Container from "../container"
+import SwipeableViews from "react-swipeable-views"
 
 export default () => {
+  const [cardIndex, setCardIndex] = React.useState(0)
   const theme = useTheme()
   const downXs = useMediaQuery(theme.breakpoints.down("xs"))
 
@@ -36,7 +44,7 @@ export default () => {
   return (
     <Container>
       <h1>Media</h1>
-      <FlexContainer>
+      <CardView downXs={downXs} index={cardIndex} onChangeIndex={setCardIndex}>
         {query.allMediaOg.edges.map(edge => {
           const node = edge.node
           return (
@@ -49,7 +57,16 @@ export default () => {
             </FlexItem>
           )
         })}
-      </FlexContainer>
+      </CardView>
+      {downXs ? (
+        <Pagination
+          count={4}
+          page={cardIndex + 1}
+          onChange={(_, val) => setCardIndex(val - 1)}
+        />
+      ) : (
+        []
+      )}
       <ArrowButton
         to="/media"
         color="#1A1A1A"
@@ -77,21 +94,35 @@ const Container = withTheme(styled(_Container)`
   }
 `)
 
-const FlexContainer = withTheme(styled.div`
-  margin-top: 40px;
-  display: flex;
-  flex: 0 0 auto;
-  justify-content: left;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
-  ${props => props.theme.breakpoints.down("xs")} {
-    scroll-snap-type: x mandatory;
+const CardView = ({ downXs, ...props }) => {
+  if (!downXs) {
+    return <FlexContainer {...props} />
+  } else {
+    return <SwipeableViews enableMouseEvents {...props} />
   }
-`)
+}
 
 const FlexItem = withTheme(styled.div`
   ${props => props.theme.breakpoints.down("xs")} {
     scroll-snap-align: start;
-    min-width: 100%;
+    // min-width: 100%;
   }
+`)
+
+const Pagination = withStyles(theme => ({
+  ul: {
+    justifyContent: "center",
+  },
+}))(MuiPagination)
+
+const FlexContainer = withTheme(styled.div`
+margin-top: 40px;
+display: flex;
+flex: 0 0 auto;
+justify-content: left;
+overflow-x: scroll;
+flex-wrap: nowrap;
+// ${props => props.theme.breakpoints.down("xs")} {
+//   scroll-snap-type: x mandatory;
+// }
 `)
