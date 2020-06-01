@@ -1,8 +1,9 @@
 import React from "react"
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 import AngleDown from "../images/icons/arrow-down.inline.svg"
 import Container from "./container"
 import { StyledLink as Link } from "./link"
+import { useTheme, useMediaQuery } from "@material-ui/core"
 
 /*
 [
@@ -48,6 +49,9 @@ const Wrapper = styled(Container)`
   }
 `
 const NavLabel = ({ children, ...props }) => {
+  const theme = useTheme();
+  const downXs = useMediaQuery(theme.breakpoints.down("xs"));
+
   const NavLabelWrapper = styled.div`
     white-space: nowrap;
     margin: 0px 0px 0px -2px;
@@ -61,9 +65,14 @@ const NavLabel = ({ children, ...props }) => {
     border-left: solid 2px #a0a0a0;
     border-right: solid 2px #a0a0a0;
   `
+  
+  const LinkCss= css`
+    margin-bottom: 5px;
+    width: ${downXs ? "50%" : "auto"};
+  `
 
   return (
-    <Link {...props}>
+    <Link {...props} css={LinkCss}>
       <NavLabelWrapper>{children}</NavLabelWrapper>
       <AngleDown css="fill: currentColor; margin: 0 auto 0; display: block" />
     </Link>
