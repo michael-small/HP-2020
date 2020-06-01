@@ -16,10 +16,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#F5F5F5",
     margin: "0px auto auto",
     position: "relative",
-    maxWidth: 350,
+    width: 350,
     minHeight: 370,
     [theme.breakpoints.down("xs")]: {
-      maxWidth: 300,
+      width: 300,
     },
   },
   content: {
@@ -46,12 +46,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const MediaCard = ({ node }) => {
+const MediaCard = ({ node, style }) => {
   const classes = useStyles()
 
   // console.log(node.og.image[0].url)
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={style}>
       <CardMedia
         fluid={node.featuredImg.childImageSharp.fluid}
         alt={node.og.title}

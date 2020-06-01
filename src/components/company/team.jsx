@@ -6,7 +6,6 @@ import IconButton from "@material-ui/core/IconButton"
 import CloseIcon from "@material-ui/icons/Close"
 import localTheme from "./theme"
 import _Container from "../container"
-import background from "../background"
 
 const Introductions = [
   {

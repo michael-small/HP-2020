@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
 import Image from "../image"
-import { StyledLink as Link } from "../link"
-import { ArrowButton } from "./arrowButton"
+import ArrowButton from "./arrowButton"
 import Container from "../container"
 
 export default () => {
@@ -14,9 +13,7 @@ export default () => {
         人々に力を与えるはずのテクノロジーが人々から自由とプライバシーを奪っています。ブロックチェーンを始めとする分散化技術は価値のインターネットを可能にし、人々にデータの検証可能性をもたらします。私たちは、集権的なシステムではなくブロックチェーンを始めとする分散化技術によってよりよい社会を実現します。
       </WhoDescription>
       <div align="center" style={{ marginTop: "20px" }}>
-        <Link to="/company">
-          <ArrowButton label="詳しく見る" color="#1A1A1A" />
-        </Link>
+        <ArrowButton to="/company" color="#1A1A1A" />
       </div>
       <SupportedByText>Supported By</SupportedByText>
       <SupporterArea>

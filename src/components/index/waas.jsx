@@ -3,12 +3,9 @@ import { withTheme, useMediaQuery, useTheme } from "@material-ui/core"
 import Background from "../background"
 import Image from "../image"
 import styled from "styled-components"
-import { ButtonRect, ButtonLabel, ArrowRightIcon } from "../arrowButton"
-
+import ArrowButton from "./arrowButton"
 import ProductCards from "../product-cards"
-// import { StyledLink as Link } from "../link"
 import Container from "../container"
-import { navigate } from "gatsby"
 
 export default () => {
   const theme = useTheme()
@@ -68,37 +65,6 @@ export default () => {
         </FlexContainer>
       </WaasContainer>
     </WaasWrapper>
-  )
-}
-
-const ArrowButton = ({ style, to, ...props }) => {
-  const theme = useTheme()
-  const downXs = useMediaQuery(theme.breakpoints.down("xs"))
-
-  return (
-    <ButtonRect
-      lang={downXs ? "en" : "ja"}
-      width={downXs ? "140px" : "150px"}
-      height="46px"
-      color="#FFFFFF"
-      backgroundColor="rbga(0,0,0,0)"
-      style={{
-        fontSize: downXs ? "16px" : "15px",
-        opacity: 0.7,
-        border: "1px solid",
-        margin: downXs ? "20px auto 0px" : "30px 0px 0px",
-        // ...style,
-      }}
-      onClick={() => {
-        navigate(to)
-      }}
-      {...props}
-    >
-      <ButtonLabel style={{ opacity: 1 }}>
-        {downXs ? "More Detail" : "詳しく見る"}
-        <ArrowRightIcon />
-      </ButtonLabel>
-    </ButtonRect>
   )
 }
 
