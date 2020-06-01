@@ -49,7 +49,6 @@ const useStyles = makeStyles(theme => ({
 const MediaCard = ({ node, style }) => {
   const classes = useStyles()
 
-  // console.log(node.og.image[0].url)
   return (
     <Card className={classes.root} style={style}>
       <CardMedia
