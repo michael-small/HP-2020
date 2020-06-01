@@ -9,8 +9,8 @@ import React from "react"
 import styled from "styled-components"
 import { Container as MuiContainer } from "@material-ui/core"
 
-const Container = props => <MuiContainer maxWidth="lg" {...props}/>
+const Container = props => <MuiContainer maxWidth="lg" {...props} />
 
 export default styled(Container)({
-    width: "100%",
+  width: "100%",
 })
