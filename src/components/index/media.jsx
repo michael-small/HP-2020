@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {useStaticQuery} from "gatsby"
+import { useStaticQuery } from "gatsby"
 import { withTheme, useTheme, useMediaQuery } from "@material-ui/core"
 import ArrowButton from "./arrowButton"
 import MediaCard from "../media/media-card"
@@ -12,7 +12,7 @@ export default () => {
 
   const query = useStaticQuery(graphql`
     query {
-      allMediaOg(sort: { fields: datetime, order: DESC } limit:4) {
+      allMediaOg(sort: { fields: datetime, order: DESC }, limit: 4) {
         edges {
           node {
             datetime
@@ -37,16 +37,24 @@ export default () => {
     <Container>
       <h1>Media</h1>
       <FlexContainer>
-      {query.allMediaOg.edges.map(edge => {
-        const node = edge.node
-        return(
-          <FlexItem>
-            <MediaCard node={node} key={edge.node.id} style={{margin: downXs ? "0px auto 0px " : "0px 10px 0px"}}/>
-          </FlexItem>
-        )
-      })}
+        {query.allMediaOg.edges.map(edge => {
+          const node = edge.node
+          return (
+            <FlexItem>
+              <MediaCard
+                node={node}
+                key={edge.node.id}
+                style={{ margin: downXs ? "0px auto 0px " : "0px 10px 0px" }}
+              />
+            </FlexItem>
+          )
+        })}
       </FlexContainer>
-      <ArrowButton to="/media" color="#1A1A1A"style={{margin: "30px auto 0px"}}/>
+      <ArrowButton
+        to="/media"
+        color="#1A1A1A"
+        style={{ margin: "30px auto 0px" }}
+      />
     </Container>
   )
 }
@@ -59,7 +67,7 @@ const Container = withTheme(styled(_Container)`
   & h1 {
     margin-top: 120px;
   }
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     font-size: 40px;
     line-height: 54px;
     padding-bottom: 80px;
@@ -71,18 +79,18 @@ const Container = withTheme(styled(_Container)`
 
 const FlexContainer = withTheme(styled.div`
   margin-top: 40px;
-  display:flex;
+  display: flex;
   flex: 0 0 auto;
   justify-content: left;
   overflow-x: scroll;
   flex-wrap: nowrap;
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     scroll-snap-type: x mandatory;
   }
 `)
 
 const FlexItem = withTheme(styled.div`
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     scroll-snap-align: start;
     min-width: 100%;
   }

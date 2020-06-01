@@ -7,7 +7,13 @@
 
 import React from "react"
 import styled from "styled-components"
-import { Box, withTheme, Link as ExternalLink, useTheme, useMediaQuery } from "@material-ui/core"
+import {
+  Box,
+  withTheme,
+  Link as ExternalLink,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core"
 import Container from "./container"
 import { StyledLink as Link } from "./link"
 import MediumIcon from "../images/icons/medium-icon.inline.svg"
@@ -107,7 +113,7 @@ const Footer = () => {
       </FooterWrapperTop>
       <FooterHr />
       <FooterWrapperBottom>
-        <div style={downXs?{margin: "0 auto 0"}:{}}>
+        <div style={downXs ? { margin: "0 auto 0" } : {}}>
           <ExternalLink
             target="_blank"
             rel="noopener noreferrer"
@@ -142,14 +148,11 @@ const Footer = () => {
             href={SNS_LINKS.medium}
           >
             <IconButton>
-              <MediumIcon
-                width="0.75em"
-                style={{ fill: "currentcolor" }}
-              />
+              <MediumIcon width="0.75em" style={{ fill: "currentcolor" }} />
             </IconButton>
           </ExternalLink>
         </div>
-        <div style={downXs?{marginTop: "10px"}:{marginRight: "auto"}}>
+        <div style={downXs ? { marginTop: "10px" } : { marginRight: "auto" }}>
           <Copywrite>
             {`© ${new Date().getFullYear()}, Stake Technologies — All Rights Reserved`}
           </Copywrite>
@@ -172,7 +175,7 @@ const FooterBg = styled.div`
 const FooterWrapperTop = withTheme(styled(Container)`
   padding-top: 65px;
   padding-bottom: 120px;
-  ${props=>props.theme.breakpoints.down("xs")} {
+  ${props => props.theme.breakpoints.down("xs")} {
     padding-bottom: 50px;
   }
 `)
@@ -198,14 +201,13 @@ const FooterFlexContainer = withTheme(styled(Box).attrs(props => ({
   ${props => props.theme.breakpoints.down("xs")} {
     flex-direction: column;
   }
-`
-)
+`)
 
 const FooterItem = withTheme(
   styled(Box).attrs({
     item: "true",
   })`
-    padding: ${props=>props.theme.spacing(2)}px;
+    padding: ${props => props.theme.spacing(2)}px;
     letter-spacing: 0px;
     color: #ffffff;
     opacity: 1;
@@ -221,7 +223,7 @@ const FooterItem = withTheme(
       font: 14px/30px Noto Sans JP;
       text-align: left;
     }
-    ${props=>props.theme.breakpoints.down("xs")} {
+    ${props => props.theme.breakpoints.down("xs")} {
       & ul {
         display: none;
       }

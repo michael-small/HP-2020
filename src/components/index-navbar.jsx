@@ -1,5 +1,5 @@
 import React from "react"
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components"
 import AngleDown from "../images/icons/arrow-down.inline.svg"
 import Container from "./container"
 import { StyledLink as Link } from "./link"
@@ -35,7 +35,7 @@ export default ({ labels, ...props }) => {
 }
 
 const Wrapper = styled(Container)`
-   && {
+  && {
     width: 100%;
     padding-top: 46px;
     padding-bottom: 44px;
@@ -49,8 +49,8 @@ const Wrapper = styled(Container)`
   }
 `
 const NavLabel = ({ children, ...props }) => {
-  const theme = useTheme();
-  const downXs = useMediaQuery(theme.breakpoints.down("xs"));
+  const theme = useTheme()
+  const downXs = useMediaQuery(theme.breakpoints.down("xs"))
 
   const NavLabelWrapper = styled.div`
     white-space: nowrap;
@@ -65,8 +65,8 @@ const NavLabel = ({ children, ...props }) => {
     border-left: solid 2px #a0a0a0;
     border-right: solid 2px #a0a0a0;
   `
-  
-  const LinkCss= css`
+
+  const LinkCss = css`
     margin-bottom: 5px;
     width: ${downXs ? "50%" : "auto"};
   `
