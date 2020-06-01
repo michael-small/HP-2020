@@ -9,6 +9,7 @@ import Menu from "@material-ui/core/Menu"
 import MenuIcon from "@material-ui/icons/Menu"
 import { StyledLink as PageLink } from "./link"
 import StakeLogo from "../images/logo-slim.svg"
+import MediumIcon from "../images/icons/medium-icon.inline.svg"
 import {
   Button,
   Drawer,
@@ -29,6 +30,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
+
 
 import CloseIcon from "@material-ui/icons/Close"
 
@@ -354,6 +356,15 @@ export default function Navbar(props: any) {
         >
           <IconButton style={{ color: "white" }}>
             <LinkedInIcon />
+          </IconButton>
+        </Link>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={SNS_LINKS.medium}
+        >
+          <IconButton style={{ color: "white" }}>
+            <MediumIcon width="75%" style={{fill:"currentcolor", }}/>
           </IconButton>
         </Link>
       </div>
