@@ -25,7 +25,7 @@ const Introductions = [
     filename: "2_Takumi-Yamashita_CTO.jpg",
     name: "Takumi Yamashita",
     job: "CTO",
-    description: ``,
+    description: `Stake Technologies CTO。経産省管轄情報処理推進機構（IPA）のスーパープログラマ発掘事業「未踏ユース」の2018年度スーパークリエーター。大学対抗国際プログラミングコンテストファイナリスト。東京大学大学院修士。Plasm Network の開発に携わる。`,
   },
   {
     filename: "3_Masaharu-Uno_COO.jpg",
