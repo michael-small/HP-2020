@@ -24,7 +24,7 @@ function SEO({ description, lang, meta, title }) {
         }
         ogImage: file(
           sourceInstanceName: { eq: "images" }
-          relativePath: { eq: "stake-logo.png" }
+          relativePath: { eq: "stake-logo-og.png" }
         ) {
           publicURL
         }
