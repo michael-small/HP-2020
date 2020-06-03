@@ -1,6 +1,7 @@
 import React from "react"
 import IconButton from "@material-ui/core/IconButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import NavBar from "../components/navbar"

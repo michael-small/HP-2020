@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { withTheme } from "@material-ui/core"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import NavBar from "../components/navbar"
 import Layout from "../components/layout"
