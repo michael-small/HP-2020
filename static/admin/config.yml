@@ -11,7 +11,6 @@ collections:
     label: News
     folder: /content/news
     identifier_field: date
-    slug: "{{year}}-{{month}}-{{day}}"
     create: true
     fields:
       - { name: date, label: Date, widget: date }
