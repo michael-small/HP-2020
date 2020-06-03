@@ -8,7 +8,7 @@ import Media from "../components/index/media"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <Header />
     <WhoWeAre id="who-we-are" />
     <Waas id="waas" />

@@ -10,26 +10,28 @@ const Company = ({ ...props }) => {
     <Container {...props}>
       <h1>Company</h1>
       <Table>
-        <tr>
-          <Attr>会社名</Attr>
-          <Val>Stake Technologies株式会社</Val>
-        </tr>
-        <tr>
-          <Attr>設立</Attr>
-          <Val>2019年1月</Val>
-        </tr>
-        <tr>
-          <Attr>住所</Attr>
-          <Val>
-            {
-              "東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"
-            }
-          </Val>
-        </tr>
-        <tr>
-          <Attr>代表取締役</Attr>
-          <Val>渡辺創太</Val>
-        </tr>
+        <tbody>
+          <tr>
+            <Attr>会社名</Attr>
+            <Val>Stake Technologies株式会社</Val>
+          </tr>
+          <tr>
+            <Attr>設立</Attr>
+            <Val>2019年1月</Val>
+          </tr>
+          <tr>
+            <Attr>住所</Attr>
+            <Val>
+              {
+                "東京都港区南⻘山3-1-30 エイベックスビル コワーキングスペース「avex EYE」内"
+              }
+            </Val>
+          </tr>
+          <tr>
+            <Attr>代表取締役</Attr>
+            <Val>渡辺創太</Val>
+          </tr>
+        </tbody>
       </Table>
       <ArrowButton
         css="margin: 0 auto 0;"

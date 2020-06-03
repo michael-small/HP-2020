@@ -31,6 +31,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/news`,
+        name: `news`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-tinacms",
       options: {
         sidebar: {
@@ -40,7 +47,21 @@ module.exports = {
         plugins: ["gatsby-tinacms-git", "gatsby-tinacms-json"],
       },
     },
-    "gatsby-transformer-json",
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

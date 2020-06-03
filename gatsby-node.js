@@ -6,8 +6,12 @@
 
 // You can delete this file if you're not using it
 const fetch = require(`node-fetch`)
+const path = require(`path`)
 const cheerio = require("cheerio")
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+const {
+  createRemoteFileNode,
+  createFilePath,
+} = require(`gatsby-source-filesystem`)
 const { parse } = require("parse-open-graph")
 const mediaJson = require("./content/media/media.json")
 
@@ -51,7 +55,7 @@ exports.sourceNodes = async ({
         createNodeId,
       })
 
-      console.log(`fetched ${imageUrl}`)
+      // console.log(`fetched ${imageUrl}`)
     }
 
     // create node for build time data example in the docs
@@ -77,4 +81,66 @@ exports.sourceNodes = async ({
       await createOgFromUrl(url)
     })
   )
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const newsPost = path.resolve(`./src/templates/news-post.js`)
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (result.errors) {
+    throw result.errors
+  }
+
+  // Create news posts pages.
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: post.node.fields.slug,
+      component: newsPost,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const relativePath = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value: `/news${relativePath}`,
+    })
+  }
 }
