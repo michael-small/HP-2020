@@ -2,18 +2,18 @@ backend:
   name: github
   repo: staketechnologies/HP-2020
 
-media_folder: content/news
+media_folder: content/assets
 publish_mode: editorial_workflow
 
 
 collections:
   - name: news
     label: News
-    folder: /content/news
+    folder: content/news
     identifier_field: date
     create: true
     fields:
-      - { name: date, label: Date, format: "YYYY-MM-DD", widget: date }
+      - { name: datetime, label: Date, format: "YYYY-MM-DD", widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
