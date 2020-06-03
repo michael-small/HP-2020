@@ -106,9 +106,6 @@ const Pagination = withStyles(theme => ({
   ul: {
     justifyContent: "center",
   },
-  "@media (hover: none)" :{
-    backgroundColor: "blue"
-  }
 }))(MuiPagination)
 
 const FlexContainer = withTheme(styled.div`
