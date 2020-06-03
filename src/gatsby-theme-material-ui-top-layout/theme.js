@@ -21,12 +21,12 @@ theme = createMuiTheme({
       page: {
         "&.Mui-selected.MuiPaginationItem-root": {
           "@media (hover: none)": {
-            "&:hover":{
-              backgroundColor: "rgba(0,0,0,0.12)"
-            }
-          }
-        }
-      }
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0.12)",
+            },
+          },
+        },
+      },
     },
     MuiTypography: {
       body1: {

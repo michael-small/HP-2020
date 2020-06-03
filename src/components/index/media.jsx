@@ -109,10 +109,10 @@ const Pagination = withStyles(theme => ({
 }))(MuiPagination)
 
 const FlexContainer = withTheme(styled.div`
-margin-top: 40px;
-display: flex;
-flex: 0 0 auto;
-justify-content: left;
-overflow-x: scroll;
-flex-wrap: nowrap;
+  margin-top: 40px;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: left;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 `)

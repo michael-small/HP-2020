@@ -59,7 +59,7 @@ exports.sourceNodes = async ({
       //custom field
       og: resultData.og,
       featuredImg___NODE: fileNode.id,
-      datetime: (new Date(datetime)).toISOString(),
+      datetime: new Date(datetime).toISOString(),
       // required fields
       id,
       parent: null,
