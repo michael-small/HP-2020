@@ -12,7 +12,7 @@ const NewsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO title="News" />
       <NavBar />
       <Container>
         <h1>News</h1>
