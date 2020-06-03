@@ -45,10 +45,10 @@ export default () => {
     <Container>
       <h1>Media</h1>
       <CardView downXs={downXs} index={cardIndex} onChangeIndex={setCardIndex}>
-        {query.allMediaOg.edges.map(edge => {
+        {query.allMediaOg.edges.map((edge, index) => {
           const node = edge.node
           return (
-            <div>
+            <div key={index}>
               <MediaCard
                 node={node}
                 key={edge.node.id}
