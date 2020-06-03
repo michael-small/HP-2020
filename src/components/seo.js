@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, ogImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,13 +19,21 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
+        }
+        ogImage: file(
+          sourceInstanceName: { eq: "images" }
+          relativePath: { eq: "stake-logo.png" }
+        ) {
+          publicURL
         }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const currentDomain = process.env.CURRENT_DOMAIN || site.siteMetadata.siteUrl
 
   return (
     <Helmet
@@ -50,6 +58,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `${currentDomain}${ogImage.publicURL}`,
         },
         {
           name: `twitter:card`,
