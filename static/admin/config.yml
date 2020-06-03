@@ -10,8 +10,7 @@ collections:
   - name: news
     label: News
     folder: /content/news
-    identifier_field: name
-    slug: "post"
+    identifier_field: date
     create: true
     fields:
       - { name: date, label: Date, widget: date }
