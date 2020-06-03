@@ -75,7 +75,7 @@ const Article = styled.article`
   padding: 30px;
   color: #1a1a1a;
   overflow: hidden;
-  line-height: 2em;
+  line-height: 2;
 
   a {
     color: #0645ad;
@@ -118,10 +118,6 @@ const Article = styled.article`
 
   p {
     margin: 1em 0;
-    white-space: pre-line;
-    span {
-      white-space: nowrap;
-    }
   }
 
   img {
@@ -135,7 +131,7 @@ const Article = styled.article`
   h5,
   h6 {
     font-weight: normal;
-    line-height: 1em;
+    line-height: 1.5;
   }
   h4,
   h5,
