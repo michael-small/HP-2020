@@ -1,6 +1,7 @@
 import React from "react"
 import IconButton from "@material-ui/core/IconButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
+import { remarkForm, DeleteAction } from 'gatsby-tinacms-remark'
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -9,10 +10,10 @@ import styled from "styled-components"
 import { StyledLink as Link } from "../components/link"
 import Container from "../components/container"
 
-const NewsPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
+const NewsPostTemplate = (props) => {
+  const post = props.data.markdownRemark
   //   const siteTitle = data.site.siteMetadata.title
-  //   const { previous, next } = pageContext
+  //   const { previous, next } = props.pageContext
   return (
     <Layout style={{ backgroundColor: "#f1f1f1" }}>
       <SEO />
@@ -327,15 +328,39 @@ const Article = styled.article`
   }
 `
 
-export default NewsPostTemplate
+const NewsPostForm = {
+  label: 'News Post',
+  actions:[DeleteAction],
+  fields: [
+    {
+      label: 'Title',
+      name: 'frontmatter.title',
+      description: 'Enter the title of the post here',
+      component: 'text',
+    },
+    {
+      label: 'Description',
+      name: 'frontmatter.description',
+      description: 'Enter the post description',
+      component: 'textarea',
+    },
+    {
+      label: 'Date',
+      name: 'frontmatter.date',
+      component: 'date',
+    },
+    {
+      label: 'Body',
+      name: 'rawMarkdownBody',
+      component: 'markdown',
+    },
+  ],
+}
+
+export default remarkForm(NewsPostTemplate, NewsPostForm)
 
 export const pageQuery = graphql`
   query NewsPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
@@ -344,6 +369,12 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY.MM.DD")
         description
+      }
+      ...TinaRemark
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { withPlugin } from "tinacms"
+import { RemarkCreatorPlugin } from "gatsby-tinacms-remark"
 import { withTheme } from "@material-ui/core"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
@@ -7,6 +9,8 @@ import NavBar from "../components/navbar"
 import Layout from "../components/layout"
 import { StyledLink as Link } from "../components/link"
 import _Container from "../components/container"
+import uuidv4 from "uuid/v4"
+
 
 const NewsPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -119,4 +123,26 @@ export const pageQuery = graphql`
   }
 `
 
-export default NewsPage
+const CreatePostPlugin = new RemarkCreatorPlugin({
+  label: 'Create Post',
+  fields: [
+    {
+      name: 'date',
+      label: 'Date',
+      component: 'date',
+    },
+    { name: 'title', label: 'Title', component: 'text', required: true },
+    { name: 'description', label: 'Description', component: 'textarea' },
+
+  ],
+  filename: form => {
+    return `content/news/${uuidv4()}.md`
+  },
+  frontmatter: form => ({
+    title: form.title,
+    date: form.date || new Date(),
+    description: form.description || '',
+  }),
+})
+
+export default withPlugin(NewsPage, CreatePostPlugin)
