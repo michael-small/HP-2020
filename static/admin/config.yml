@@ -13,7 +13,7 @@ collections:
     identifier_field: date
     create: true
     fields:
-      - { name: date, label: Date, format: "'YYYY-MM-DD'", widget: datetime }
+      - { name: date, label: Date, format: "YYYY-MM-DD", widget: datetime }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
